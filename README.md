@@ -17,6 +17,7 @@ https://cdn.archeruuu.com/<资源类型>/<分类>/<文件名>
 ```
 cdn/
 ├── images/        图片
+│   ├── misc/          默认 / 未分类（PicList 默认上传到此）
 │   ├── blog/          博客配图
 │   ├── screenshots/   截图
 │   ├── avatars/       头像与图标
