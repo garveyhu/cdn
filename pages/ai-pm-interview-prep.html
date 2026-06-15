@@ -1080,22 +1080,6 @@ html[data-theme='dark'] {
         // 右侧目录生成插件
         plugins: [
           function (hook) {
-            // 修复 marked 的 CJK 加粗 bug：中文标点紧贴 ** 紧贴 ASCII 标点时（如 转型：**"…"**）不识别加粗。
-            // 渲染前在交界处插入发丝空格 U+200A（几乎不可见），跳过代码块与含行内代码的行，避免误伤。
-            hook.beforeEach(function (md) {
-              var CJK = '—‘-‟…　-〿㐀-鿿＀-￯';
-              var AP = '"\'\\(\\[\\)\\]\\.,!?;:<>';
-              var reO = new RegExp('([' + CJK + '])(\\*{1,3})(?=[' + AP + '])', 'g');
-              var reC = new RegExp('([' + AP + '])(\\*{1,3})(?=[' + CJK + '])', 'g');
-              var lines = md.split('\n'), inF = false, out = [];
-              for (var i = 0; i < lines.length; i++) {
-                var ln = lines[i];
-                if (/^\s*(```|~~~)/.test(ln)) { inF = !inF; out.push(ln); continue; }
-                if (inF || ln.indexOf('`') >= 0) { out.push(ln); continue; }
-                out.push(ln.replace(reO, '$1 $2').replace(reC, '$1$2 '));
-              }
-              return out.join('\n');
-            });
             hook.doneEach(function () {
               // 左侧菜单树滚动条：docsify 动态生成 .sidebar，首次渲染后绑定（滚动时显示，停 ~0.7s 隐藏；hover 也显示）
               (function () {
