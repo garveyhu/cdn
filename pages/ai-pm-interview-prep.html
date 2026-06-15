@@ -367,12 +367,11 @@ html[data-theme='dark'] {
       .iv-overlay {
         position: fixed; inset: 0; z-index: 9999;
         background: rgba(248, 250, 252, 0.97);
-        display: flex; align-items: center; justify-content: center;
         overflow: hidden; opacity: 0; transition: opacity 0.2s;
       }
       .iv-overlay.active { opacity: 1; }
       body.dark .iv-overlay { background: rgba(16, 20, 30, 0.97); }
-      .iv-stage { cursor: grab; touch-action: none; }
+      .iv-stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: grab; touch-action: none; }
       .iv-stage:active { cursor: grabbing; }
       .iv-stage img, .iv-stage svg { display: block; user-select: none; -webkit-user-drag: none; pointer-events: none; max-width: none; }
       .iv-toolbar {
@@ -1465,6 +1464,14 @@ window.__MD__ = {"/01-AI技术速通/10-模型评估与幻觉.md": "# 评估与�
           bOut.onclick = function () { pz.zoomOut({ animate: true }); };
           bFit.onclick = doFit;
           stage.addEventListener("dblclick", doFit);
+          // 移动端双击适配（touch 无 dblclick，检测两次快速、相近位置的单指轻点）
+          var _lastTap = 0, _ltX = 0, _ltY = 0;
+          stage.addEventListener("touchend", function (e) {
+            if (e.touches.length !== 0 || e.changedTouches.length !== 1) return;
+            var t = e.changedTouches[0], now = Date.now();
+            if (now - _lastTap < 320 && Math.abs(t.clientX - _ltX) < 30 && Math.abs(t.clientY - _ltY) < 30) { doFit(); _lastTap = 0; }
+            else { _lastTap = now; _ltX = t.clientX; _ltY = t.clientY; }
+          });
           window.addEventListener("resize", doFit);
 
           function close() {
