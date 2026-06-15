@@ -99,7 +99,7 @@ html[data-theme='dark'] {
         background: #252526;
       }
       body.dark .sidebar-toggle {
-        background: #252526;
+        background: transparent;
       }
       body.dark .sidebar-nav a {
         color: #aaa;
@@ -372,9 +372,9 @@ html[data-theme='dark'] {
       }
       .iv-overlay.active { opacity: 1; }
       body.dark .iv-overlay { background: rgba(16, 20, 30, 0.97); }
-      .iv-stage { cursor: grab; will-change: transform; touch-action: none; }
+      .iv-stage { cursor: grab; touch-action: none; }
       .iv-stage:active { cursor: grabbing; }
-      .iv-stage img { display: block; user-select: none; -webkit-user-drag: none; pointer-events: none; }
+      .iv-stage img, .iv-stage svg { display: block; user-select: none; -webkit-user-drag: none; pointer-events: none; max-width: none; }
       .iv-toolbar {
         position: fixed; top: 16px; right: 16px; z-index: 10000;
         display: flex; gap: 6px; padding: 6px;
@@ -1415,12 +1415,11 @@ window.__MD__ = {"/01-AI技术速通/10-模型评估与幻觉.md": "# 评估与�
           var rect = svg.getBoundingClientRect();
           var natW = (vb && vb.width) || rect.width || 800;
           var natH = (vb && vb.height) || rect.height || 600;
-          var blob = new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml;charset=utf-8" });
-          var url = URL.createObjectURL(blob);
-
           var overlay = document.createElement("div"); overlay.className = "iv-overlay";
           var stage = document.createElement("div"); stage.className = "iv-stage";
-          var img = document.createElement("img"); img.src = url; img.draggable = false;
+          // 直接克隆 SVG 节点（矢量），而非转成 <img src=svg-blob> 光栅图——放大时按矢量重渲染，不糊
+          var img = svg.cloneNode(true); img.removeAttribute("class"); img.removeAttribute("style");
+          img.setAttribute("preserveAspectRatio", "xMidYMid meet"); img.style.display = "block";
           stage.appendChild(img); overlay.appendChild(stage);
 
           var bar = document.createElement("div"); bar.className = "iv-toolbar";
@@ -1467,7 +1466,7 @@ window.__MD__ = {"/01-AI技术速通/10-模型评估与幻觉.md": "# 评估与�
             overlay.classList.remove("active");
             document.removeEventListener("keydown", onKey);
             window.removeEventListener("resize", doFit);
-            setTimeout(function () { try { pz.destroy(); } catch (e) {} overlay.remove(); URL.revokeObjectURL(url); }, 200);
+            setTimeout(function () { try { pz.destroy(); } catch (e) {} overlay.remove(); }, 200);
           }
           bClose.onclick = close;
           overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
