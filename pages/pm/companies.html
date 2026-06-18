@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AI 产品经理面试 · 公司专题 — 按公司逐家拆解的针对性备战包</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.archeruuu.com/libs/docsify/themes/vue.css"
+    />
+    <link rel="stylesheet" href="https://cdn.archeruuu.com/libs/katex/katex.min.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='24' width='100' height='100' fill='%231e293b'/><path d='M50 33 C43.5 28 33 27 26.5 29.5 V69 C33 66.5 43.5 67.5 50 72 C56.5 67.5 67 66.5 73.5 69 V29.5 C67 27 56.5 28 50 33 Z' fill='none' stroke='%23ffffff' stroke-width='4' stroke-linejoin='round'/><path d='M50 33 V72' stroke='%23ffffff' stroke-width='3.5'/></svg>"
+    />
+
+    <style>
+      :root {
+        --theme-color: #2b8fd6;
+      }
+      body.dark {
+        background: #1e1e1e;
+        color: #e8e8e8;
+      }
+      body.dark .sidebar {
+        background: #252526;
+      }
+      body.dark .sidebar-toggle {
+        background: transparent;
+      }
+      body.dark .sidebar-nav a {
+        color: #aaa;
+      }
+      body.dark .sidebar-nav a:hover {
+        color: var(--theme-color);
+      }
+      body.dark .markdown-section {
+        color: #e8e8e8;
+      }
+      body.dark .markdown-section h1,
+      body.dark .markdown-section h2,
+      body.dark .markdown-section h3 {
+        color: #e8e8e8;
+      }
+      body.dark .markdown-section a {
+        color: var(--theme-color);
+      }
+      body.dark .markdown-section code {
+        background: #2d2d30;
+        color: #e8e8e8;
+      }
+      body.dark .markdown-section pre {
+        background: #2d2d30 !important;
+      }
+      body.dark .search input {
+        background: #2d2d30;
+        color: #e8e8e8;
+        border-color: #3e3e42;
+      }
+      body.dark .search {
+        border-bottom-color: #3e3e42 !important;
+      }
+      body.dark .search input::placeholder {
+        color: #888;
+      }
+      body.dark .search .results-panel {
+        background: #252526;
+        border-color: #3e3e42;
+      }
+      body.dark .search .matching-post {
+        border-bottom-color: #3e3e42;
+      }
+      body.dark .search .matching-post:hover {
+        background: #2d2d30;
+      }
+      .sidebar > h1 {
+        font-size: 16px;
+        padding: 0px 10px;
+        margin: 0;
+        text-align: center;
+      }
+      .sidebar-nav > ul > li > p {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 12px 15px 6px;
+      }
+      .sidebar-nav a {
+        font-size: 13px;
+        padding: 0px 15px;
+      }
+      .sidebar-toggle {
+        margin-left: 15px !important;
+      }
+      .theme-toggle-btn {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        padding: 0;
+      }
+      .theme-toggle-btn span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .theme-toggle-btn:hover {
+        transform: scale(1.1);
+      }
+      body.dark .theme-toggle-btn {
+        background: #2d2d30;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+      .content {
+        padding-right: 320px !important;
+      }
+      #right-toc {
+        position: fixed;
+        right: 20px;
+        top: 80px;
+        width: 260px;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #ffffff;
+        z-index: 50;
+      }
+      body.dark #right-toc {
+        background: #252526;
+        border-color: #3e3e42;
+      }
+      #right-toc .toc-title {
+        font-weight: 700;
+        font-size: 15px;
+        margin: 0 0 15px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e8e8e8;
+        color: #2c3e50;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        user-select: none;
+      }
+      #right-toc .toc-title .collapse-icon {
+        transition: transform 0.3s;
+      }
+      #right-toc.collapsed .toc-title .collapse-icon {
+        transform: rotate(-90deg);
+      }
+      #right-toc.collapsed #toc-content {
+        display: none;
+      }
+      body.dark #right-toc .toc-title {
+        color: #e8e8e8;
+        border-bottom-color: #3e3e42;
+      }
+      #right-toc a {
+        display: block;
+        padding: 5px 10px;
+        font-size: 13px;
+        line-height: 1.8;
+        color: #5d6d7e;
+        text-decoration: none;
+        border-left: 0;
+        transition: all 0.2s;
+        border-radius: 4px;
+      }
+      body.dark #right-toc a {
+        color: #aaa;
+      }
+      #right-toc a:hover {
+        color: var(--theme-color);
+        background: rgba(43, 143, 214, 0.1);
+      }
+      #right-toc a.active {
+        color: var(--theme-color);
+        font-weight: 600;
+        background: rgba(43, 143, 214, 0.15);
+      }
+      #right-toc .h2 {
+        padding-left: 10px;
+      }
+      #right-toc .h3 {
+        padding-left: 20px;
+        font-size: 12px;
+      }
+      #right-toc .h4 {
+        padding-left: 30px;
+        font-size: 12px;
+      }
+      #right-toc::-webkit-scrollbar {
+        width: 6px;
+      }
+      #right-toc::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      #right-toc::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 3px;
+        transition: background 0.3s;
+      }
+      #right-toc.scrolling::-webkit-scrollbar-thumb,
+      #right-toc:hover::-webkit-scrollbar-thumb {
+        background: #ccc;
+      }
+      body.dark #right-toc.scrolling::-webkit-scrollbar-thumb,
+      body.dark #right-toc:hover::-webkit-scrollbar-thumb {
+        background: #555;
+      }
+      /* Firefox：默认隐藏滚动条，滚动 / 悬停时才显示 */
+      #right-toc {
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+        transition: scrollbar-color 0.3s;
+      }
+      #right-toc.scrolling,
+      #right-toc:hover {
+        scrollbar-color: #ccc transparent;
+      }
+      body.dark #right-toc.scrolling,
+      body.dark #right-toc:hover {
+        scrollbar-color: #555 transparent;
+      }
+      /* 左侧菜单树滚动条：与右侧目录一致 —— 默认隐藏，滚动 / 悬停才显示 */
+      .sidebar::-webkit-scrollbar { width: 6px; }
+      .sidebar::-webkit-scrollbar-track { background: transparent; }
+      .sidebar::-webkit-scrollbar-thumb { background: transparent; border-radius: 3px; transition: background 0.3s; }
+      .sidebar.scrolling::-webkit-scrollbar-thumb,
+      .sidebar:hover::-webkit-scrollbar-thumb { background: #ccc; }
+      body.dark .sidebar.scrolling::-webkit-scrollbar-thumb,
+      body.dark .sidebar:hover::-webkit-scrollbar-thumb { background: #555; }
+      .sidebar { scrollbar-width: thin; scrollbar-color: transparent transparent; transition: scrollbar-color 0.3s; }
+      .sidebar.scrolling,
+      .sidebar:hover { scrollbar-color: #ccc transparent; }
+      body.dark .sidebar.scrolling,
+      body.dark .sidebar:hover { scrollbar-color: #555 transparent; }
+      @media screen and (max-width: 1200px) {
+        #right-toc {
+          display: none;
+        }
+        .content {
+          padding-right: 0 !important;
+        }
+        .theme-toggle-btn {
+          right: 20px;
+        }
+      }
+      /* 复制按钮：纯图标（无边框/无背景/无文字）—— 悬停代码块才显示；默认灰、hover 强调色、成功变绿对勾（插件 1s 后自动恢复） */
+      .docsify-copy-code-button {
+        top: 6px !important; right: 6px !important; bottom: auto !important; left: auto !important;
+        width: 18px !important; height: 18px !important; padding: 0 !important;
+        display: grid !important; place-items: center !important;
+        font-size: 0 !important;
+        background: transparent !important;
+        color: var(--fg-mut) !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        opacity: 0 !important;
+        transition: opacity .15s, color .15s !important;
+        --copy-glyph: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>');
+      }
+      .docsify-copy-code-button > span { display: none !important; }
+      .docsify-copy-code-button::before {
+        content: ""; width: 14px; height: 14px; background: currentColor;
+        -webkit-mask: var(--copy-glyph) center / contain no-repeat;
+        mask: var(--copy-glyph) center / contain no-repeat;
+      }
+      .markdown-section pre:hover .docsify-copy-code-button { opacity: .65 !important; }
+      .markdown-section pre .docsify-copy-code-button:hover { opacity: 1 !important; }
+      .mermaid {
+        cursor: zoom-in;
+        transition: all 0.3s;
+      }
+      .mermaid:hover {
+        opacity: 0.9;
+      }
+      /* Mermaid/图 全屏预览器：打开即居中适配屏幕，居中/光标缩放不漂移，带工具栏 */
+      .iv-overlay {
+        position: fixed; inset: 0; z-index: 9999;
+        background: rgba(248, 250, 252, 0.97);
+        overflow: hidden; opacity: 0; transition: opacity 0.2s;
+      }
+      .iv-overlay.active { opacity: 1; }
+      body.dark .iv-overlay { background: rgba(16, 20, 30, 0.97); }
+      .iv-stage { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; cursor: grab; touch-action: none; }
+      .iv-stage:active { cursor: grabbing; }
+      .iv-stage img, .iv-stage svg { display: block; user-select: none; -webkit-user-drag: none; pointer-events: none; max-width: none; }
+      .iv-toolbar {
+        position: fixed; top: 16px; right: 16px; z-index: 10000;
+        display: flex; gap: 6px; padding: 6px;
+        background: var(--glass); border: 1px solid var(--border); border-radius: 12px;
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: var(--shadow);
+      }
+      .iv-toolbar button {
+        width: 36px; height: 36px; border-radius: 9px; border: 1px solid transparent;
+        background: transparent; color: var(--fg-soft); cursor: pointer;
+        display: grid; place-items: center; transition: color .15s, background .15s;
+      }
+      .iv-toolbar button:hover { color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
+      .iv-toolbar button svg { width: 18px; height: 18px; }
+      .iv-toolbar .iv-sep { width: 1px; background: var(--border); margin: 5px 2px; }
+      .iv-hint {
+        position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 10000;
+        color: var(--fg-mut); font-size: 12px; padding: 5px 14px; border-radius: 999px;
+        background: var(--glass); border: 1px solid var(--border);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); opacity: .92; pointer-events: none;
+      }
+      .docsify-copy-code-button:hover { color: var(--accent) !important; }
+      .docsify-copy-code-button.success {
+        color: #16a34a !important;
+        --copy-glyph: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>');
+      }
+      body.dark .docsify-copy-code-button { background: transparent !important; color: var(--fg-mut) !important; border: none !important; }
+      body.dark .docsify-copy-code-button:hover { color: var(--accent) !important; }
+      body.dark .docsify-copy-code-button.success { color: #4ade80 !important; }
+    </style>
+
+    <!-- ============================================================
+         Docsify Station：仅保留「搜索右移 + 设置入口」所需的 chrome 层
+         默认零视觉变化（强调色=品牌蓝；阅读偏好仅在主动改动时生效）
+         ============================================================ -->
+    <style id="station-chrome">
+      :root {
+        --bg-elev: #ffffff; --glass: rgba(255, 255, 255, 0.74);
+        --border: #e2e8f3; --border-soft: #eef2f9;
+        --fg: #2c3e50; --fg-soft: #5d6d7e; --fg-mut: #8893ad;
+        --shadow: 0 10px 34px -16px #1a223633, 0 2px 8px -4px #1a223618;
+        --a1: #2b8fd6; --a2: #5468ee; --a3: #6d5cf0;
+      }
+      html[data-accent='aurora'] { --a1: #5ed1ff; --a2: #a78bfa; --a3: #f472b6; }
+      html[data-accent='ocean']  { --a1: #2b8fd6; --a2: #5468ee; --a3: #6d5cf0; }
+      html[data-accent='forest'] { --a1: #34d399; --a2: #10b981; --a3: #06b6d4; }
+      html[data-accent='sunset'] { --a1: #fbbf24; --a2: #fb923c; --a3: #f43f5e; }
+      html[data-accent='mono']   { --a1: #94a3b8; --a2: #64748b; --a3: #475569; }
+      :root {
+        --accent: var(--a1); --accent2: var(--a2);
+        --grad: linear-gradient(120deg, var(--a1) 0%, var(--a2) 52%, var(--a3) 100%);
+        --grad-soft: linear-gradient(120deg, color-mix(in srgb, var(--a1) 16%, transparent), color-mix(in srgb, var(--a2) 14%, transparent));
+        /* 标题专用活力渐变（蓝→紫→粉），仅用于封面/侧栏标题等展示位 */
+        --title-grad: linear-gradient(120deg, var(--a1) 0%, #a78bfa 52%, #f472b6 100%);
+        --theme-color: var(--accent);
+      }
+      body.dark {
+        --bg-elev: #252526; --glass: rgba(32, 32, 34, 0.78);
+        --border: #3e3e42; --border-soft: #33333a;
+        --fg: #e8e8e8; --fg-soft: #bcbcbc; --fg-mut: #8a8a8a;
+        --shadow: 0 12px 44px -14px #000a, 0 2px 10px -4px #0008;
+      }
+      /* 阅读偏好：仅非默认值作用到正文，默认与原版一致 */
+      html[data-fs='s'] .markdown-section { font-size: 13.5px; }
+      html[data-fs='l'] .markdown-section { font-size: 17.5px; }
+      html[data-fs='xl'] .markdown-section { font-size: 19px; }
+      html[data-width='compact'] .markdown-section { max-width: 680px; }
+      html[data-width='wide'] .markdown-section { max-width: 1020px; }
+      html[data-width='full'] .markdown-section { max-width: none; }
+      html[data-leading='tight'] .markdown-section { line-height: 1.55; }
+      html[data-leading='relaxed'] .markdown-section { line-height: 2.0; }
+      html[data-font='serif'] .markdown-section { font-family: "Source Han Serif SC", "Noto Serif SC", "Songti SC", Georgia, serif; }
+      body.reduce-motion *, body.reduce-motion *::before, body.reduce-motion *::after { transition: none !important; animation: none !important; }
+
+      /* 隐藏左上角搜索框 */
+      .sidebar .search { display: none !important; }
+      /* ---- 目录树（参考 Chameleon 的克制版：无 emoji，标题同色系渐变，选中低调） ---- */
+      .sidebar > h1.app-name { text-align: center; margin: 14px 0 16px; padding: 0 16px; }
+      .sidebar .app-name-link {
+        font-size: 17px; font-weight: 800; letter-spacing: .2px;
+        background: var(--title-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      }
+      /* 标题样式：纯色（主题色）—— 默认渐变，设置面板可切 */
+      html[data-title='solid'] .sidebar .app-name-link {
+        background: none; -webkit-background-clip: border-box; background-clip: border-box;
+        -webkit-text-fill-color: var(--accent); color: var(--accent);
+      }
+      .sidebar-nav > ul > li > p, .sidebar-nav > ul > li > strong {
+        font-size: 11.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+        color: var(--fg-mut); margin: 11px 16px 4px;
+      }
+      /* 目录密度（设置面板可调：紧凑 / 标准 / 宽松） */
+      html[data-nav='compact'] .sidebar-nav > ul > li > p, html[data-nav='compact'] .sidebar-nav > ul > li > strong { margin-top: 6px; }
+      html[data-nav='compact'] .sidebar-nav a { padding-top: 3px; padding-bottom: 3px; }
+      html[data-nav='roomy'] .sidebar-nav > ul > li > p, html[data-nav='roomy'] .sidebar-nav > ul > li > strong { margin-top: 22px; }
+      html[data-nav='roomy'] .sidebar-nav a { padding-top: 8px; padding-bottom: 8px; }
+      .sidebar-nav li { margin: 0 !important; }
+      .sidebar-nav a {
+        display: block; font-size: 13.5px; line-height: 1.5; color: var(--fg-soft);
+        padding: 5px 12px; margin: 1px 8px; border-radius: 8px;
+        transition: background .15s, color .15s;
+      }
+      .sidebar-nav a:hover { color: var(--fg); background: color-mix(in srgb, var(--accent) 9%, transparent); }
+      .sidebar-nav li.active > a, .sidebar-nav a.active {
+        color: var(--accent); font-weight: 600;
+        background: color-mix(in srgb, var(--accent) 12%, transparent);
+      }
+
+      /* ---- 收紧标题/导航上方空白 ---- */
+      .content { padding-top: 0 !important; }
+      .markdown-section { padding-top: 24px; }
+      #right-toc { top: 28px; padding: 14px 16px; }
+
+      .glass { background: var(--glass); -webkit-backdrop-filter: blur(16px) saturate(1.4); backdrop-filter: blur(16px) saturate(1.4); border: 1px solid var(--border); box-shadow: var(--shadow); }
+      /* 性能关键：仅在浮层「可见时」启用毛玻璃，避免常驻 backdrop-filter 每帧重算背后模糊 → 滚动卡顿 */
+      #station-drawer:not(.open), #station-toast:not(.show) { -webkit-backdrop-filter: none !important; backdrop-filter: none !important; }
+
+      #read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--grad); z-index: 200; transition: width .1s linear; }
+      body.no-progress #read-progress { display: none; }
+      .progress { display: none !important; } /* 隐藏 docsify 自带顶部加载进度条 */
+
+      /* 右上角：搜索——无边框幽灵图标，贴近角落（同左下齿轮） */
+      .station-toolbar { position: fixed; top: 10px; right: 10px; display: flex; gap: 8px; z-index: 80; }
+      .chrome-btn {
+        width: 30px; height: 30px; border-radius: 8px; cursor: pointer; color: var(--fg-mut);
+        display: inline-flex; align-items: center; justify-content: center;
+        background: transparent; border: none; box-shadow: none; font-family: inherit;
+        transition: color .15s, transform .15s;
+      }
+      .chrome-btn:hover { color: var(--accent); transform: translateY(-1px); }
+      .chrome-btn svg { width: 18px; height: 18px; }
+
+      /* 左下角设置齿轮——无边框幽灵图标，贴近角落 */
+      #station-gear {
+        position: fixed; left: 10px; bottom: 10px; width: 30px; height: 30px;
+        cursor: pointer; color: var(--fg-mut); z-index: 80; display: flex; align-items: center; justify-content: center;
+        background: transparent; border: none; box-shadow: none;
+        transition: color .2s, transform .3s;
+      }
+      #station-gear:hover { color: var(--accent); transform: rotate(30deg); }
+      #station-gear svg { width: 18px; height: 18px; }
+
+      /* 桌面端隐藏 docsify 自带汉堡折叠键（左下角那条蓝色横条 + 与齿轮冲突） */
+      @media (min-width: 769px) { .sidebar-toggle { display: none !important; } }
+      /* 移动端专属适配：保留 docsify 原生菜单树 toggle（左下），把设置齿轮挪到右下，二者不再重叠；正文满宽 + 左右对称内边距 */
+      @media (max-width: 768px) {
+        #station-gear { left: auto; right: 12px; bottom: 10px; }
+        .sidebar-toggle { z-index: 81; }
+        .content { padding-right: 0 !important; padding-left: 0 !important; }
+        .markdown-section { max-width: 100% !important; padding-left: 18px !important; padding-right: 18px !important; }
+      }
+
+      /* 设置抽屉 */
+      #station-backdrop { position: fixed; inset: 0; background: rgba(4, 8, 16, .42); z-index: 290; opacity: 0; pointer-events: none; transition: opacity .25s; }
+      #station-backdrop.open { opacity: 1; pointer-events: auto; }
+      #station-drawer { position: fixed; left: 0; top: 0; bottom: 0; width: 360px; max-width: 88vw; z-index: 300; transform: translateX(-104%); transition: transform .3s cubic-bezier(.4,0,.2,1); display: flex; flex-direction: column; border-radius: 0 18px 18px 0; }
+      #station-drawer.open { transform: none; }
+      #station-drawer .sd-head { display: flex; align-items: center; justify-content: space-between; padding: 20px 22px 14px; border-bottom: 1px solid var(--border); }
+      #station-drawer .sd-head span { font-size: 16px; font-weight: 750; color: var(--fg); }
+      #station-drawer .sd-close { background: transparent; border: none; color: var(--fg-mut); cursor: pointer; width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+      #station-drawer .sd-close:hover { color: var(--fg); background: var(--bg-elev); }
+      #station-drawer .sd-close svg { width: 16px; height: 16px; }
+      #station-drawer .sd-body { padding: 8px 22px 22px; overflow-y: auto; }
+      #station-drawer .sd-row { margin-top: 20px; }
+      #station-drawer .sd-label { font-size: 12px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: var(--fg-mut); margin-bottom: 9px; }
+      #station-drawer .sd-toggle-row .sd-label kbd { margin-left: 6px; font-size: 10px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--fg-mut); border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; font-family: inherit; }
+      #station-drawer .seg { display: flex; background: var(--bg-elev); border: 1px solid var(--border); border-radius: 11px; padding: 3px; gap: 3px; }
+      #station-drawer .seg button { flex: 1; border: none; background: transparent; color: var(--fg-soft); cursor: pointer; font-size: 13px; padding: 7px 6px; border-radius: 8px; transition: all .15s; font-family: inherit; }
+      #station-drawer .seg button:hover { color: var(--fg); }
+      #station-drawer .seg button.on { background: var(--glass); color: var(--accent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent); font-weight: 650; }
+      #station-drawer .swatches { display: flex; gap: 10px; }
+      #station-drawer .swatch { width: 30px; height: 30px; border-radius: 9px; cursor: pointer; border: 2px solid transparent; transition: transform .15s; }
+      #station-drawer .swatch:hover { transform: scale(1.12); }
+      #station-drawer .swatch.on { border-color: var(--fg); box-shadow: 0 0 0 2px var(--bg-elev), 0 0 0 4px color-mix(in srgb, var(--accent) 60%, transparent); }
+      .sw-aurora { background: linear-gradient(120deg, #5ed1ff, #a78bfa, #f472b6); }
+      .sw-ocean  { background: linear-gradient(120deg, #2b8fd6, #5468ee, #6d5cf0); }
+      .sw-forest { background: linear-gradient(120deg, #34d399, #10b981, #06b6d4); }
+      .sw-sunset { background: linear-gradient(120deg, #fbbf24, #fb923c, #f43f5e); }
+      .sw-mono   { background: linear-gradient(120deg, #94a3b8, #64748b, #475569); }
+      #station-drawer .sd-toggle-row { display: flex; align-items: center; justify-content: space-between; }
+      #station-drawer .sd-toggle-row .sd-label { margin-bottom: 0; }
+      #station-drawer .switch { width: 44px; height: 25px; border-radius: 999px; border: 1px solid var(--border); background: var(--bg-elev); cursor: pointer; position: relative; transition: background .2s, border-color .2s; flex: none; }
+      #station-drawer .switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 19px; height: 19px; border-radius: 50%; background: var(--fg-mut); transition: transform .2s, background .2s; }
+      #station-drawer .switch.on { background: var(--grad); border-color: transparent; }
+      #station-drawer .switch.on::after { transform: translateX(19px); background: #fff; }
+      #station-drawer .sd-foot { margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--border); }
+      #station-drawer .sd-reset { width: 100%; padding: 9px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-elev); color: var(--fg-soft); cursor: pointer; font-size: 13px; font-family: inherit; transition: all .15s; }
+      #station-drawer .sd-reset:hover { color: var(--fg); border-color: var(--accent); }
+
+      /* 命令面板 */
+      #station-cmdk { position: fixed; inset: 0; z-index: 400; display: none; }
+      #station-cmdk.open { display: block; }
+      #station-cmdk .cmdk-bg { position: absolute; inset: 0; background: rgba(4, 8, 16, .5); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+      #station-cmdk .cmdk-panel { position: absolute; left: 50%; top: 12vh; transform: translateX(-50%); width: 640px; max-width: 92vw; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; max-height: 72vh; }
+      #station-cmdk-search { border-bottom: 1px solid var(--border); }
+      #station-cmdk-search .search { margin: 0; padding: 0; border: none; position: static; }
+      #station-cmdk-search .search .input-wrap { margin: 0; padding: 6px 10px; }
+      #station-cmdk-search .search input { width: 100%; border: none; background: transparent; color: var(--fg); font-size: 16px; padding: 12px 8px; outline: none; font-family: inherit; }
+      #station-cmdk-search .search input::placeholder { color: var(--fg-mut); }
+      #station-cmdk-search .search .clear-button { display: none; }
+      #station-cmdk-search .search .results-panel { display: none; border: none; background: transparent; }
+      #station-cmdk-search .search .results-panel.show { display: block; }
+      #station-cmdk-actions { padding: 8px; border-bottom: 1px solid var(--border); }
+      #station-cmdk-actions .cmdk-hint { font-size: 11px; color: var(--fg-mut); padding: 4px 10px 6px; letter-spacing: .5px; text-transform: uppercase; }
+      #station-cmdk-actions .cmdk-action { width: 100%; display: flex; align-items: center; gap: 11px; padding: 9px 11px; border: none; background: transparent; color: var(--fg-soft); cursor: pointer; border-radius: 9px; font-size: 13.5px; font-family: inherit; text-align: left; }
+      #station-cmdk-actions .cmdk-action:hover { background: var(--grad-soft); color: var(--fg); }
+      #station-cmdk-actions .cmdk-action svg { width: 16px; height: 16px; opacity: .8; flex: none; }
+      #station-cmdk-actions .cmdk-action kbd { margin-left: auto; font-size: 11px; color: var(--fg-mut); border: 1px solid var(--border); border-radius: 5px; padding: 1px 7px; font-family: inherit; line-height: 1.5; }
+      #station-cmdk .results-panel { padding: 6px; }
+      #station-cmdk .matching-post { border: none !important; padding: 10px 12px !important; border-radius: 9px; cursor: pointer; }
+      #station-cmdk .matching-post:hover, #station-cmdk .matching-post.sel { background: var(--grad-soft); }
+      #station-cmdk .matching-post h2 { font-size: 14px !important; color: var(--fg) !important; margin: 0 0 3px !important; padding: 0 !important; border: none !important; }
+      #station-cmdk .matching-post p { font-size: 12.5px !important; color: var(--fg-mut) !important; margin: 0 !important; }
+      #station-cmdk .search-keyword { color: var(--accent) !important; }
+
+      /* Toast */
+      #station-toast { position: fixed; left: 50%; bottom: 28px; transform: translateX(-50%) translateY(20px); padding: 10px 18px; border-radius: 11px; color: var(--fg); font-size: 13px; z-index: 500; opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; }
+      #station-toast.show { opacity: 1; transform: translateX(-50%); }
+
+      /* 右侧目录开关 / 专注模式：释放列 */
+      body.no-toc .content { padding-right: 2rem !important; }
+      body.no-toc #right-toc { display: none !important; }
+      body.zen .sidebar { transform: translateX(-100%); }
+      body.zen .content { left: 0 !important; padding-right: 2rem !important; }
+      body.zen .station-toolbar, body.zen #right-toc, body.zen .sidebar-toggle { display: none !important; }
+      /* 目录树文字：无下划线（左侧栏 + 右侧悬浮目录，含 hover） */
+      .sidebar-nav a, .sidebar-nav a:hover, .sidebar-nav a:focus,
+      #right-toc a, #right-toc a:hover, #right-toc a:visited { text-decoration: none !important; border-bottom: none !important; }
+
+      /* 设置面板内的搜索入口 */
+      #station-drawer .sd-search { width: 100%; display: flex; align-items: center; gap: 9px; padding: 10px 12px; margin-bottom: 8px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg-elev); color: var(--fg-soft); font-size: 13.5px; font-family: inherit; cursor: pointer; transition: color .15s, border-color .15s; }
+      #station-drawer .sd-search:hover { color: var(--fg); border-color: var(--accent); }
+      #station-drawer .sd-search svg { width: 16px; height: 16px; }
+      #station-drawer .sd-search kbd { margin-left: auto; font-size: 11px; color: var(--fg-mut); border: 1px solid var(--border); border-radius: 5px; padding: 1px 6px; }
+
+      /* ---- Mermaid：去黄底，卡片化，质感统一 ---- */
+      .mermaid {
+        background: var(--bg-elev); border: 1px solid var(--border); border-radius: 14px;
+        padding: 18px 16px; margin: 1.6em 0; text-align: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+      }
+      .mermaid svg { max-width: 100%; height: auto; }
+      /* 时序图 Note：去黄底，换中性（themeVariables 对 note 不稳，CSS 强制） */
+      .mermaid rect.note { fill: #eef2f9 !important; stroke: #d3def0 !important; }
+      .mermaid .noteText, .mermaid .noteText tspan { fill: #334155 !important; }
+      body.dark .mermaid rect.note { fill: #222c44 !important; stroke: #3a4a6b !important; }
+      body.dark .mermaid .noteText, body.dark .mermaid .noteText tspan { fill: #dfe6ff !important; }
+
+      /* ===== 正文质感（参考 Chameleon：画布氛围光 + 文字/代码/引用精修） ===== */
+      body::before {
+        content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+        transform: translateZ(0); /* 提升为独立合成层，避免滚动时重绘固定渐变 */
+        background:
+          radial-gradient(55vw 45vh at 10% -8%, color-mix(in srgb, var(--a1) 8%, transparent), transparent 60%),
+          radial-gradient(50vw 42vh at 100% 0%, color-mix(in srgb, var(--a3) 7%, transparent), transparent 55%);
+      }
+      .markdown-section p, .markdown-section li { color: var(--fg-soft); }
+      .markdown-section strong { color: var(--fg); font-weight: 650; }
+      .markdown-section a { color: var(--accent); }
+      .markdown-section h1 { font-size: 2.05em; font-weight: 800; letter-spacing: -.5px; line-height: 1.25; color: var(--fg); margin: .1em 0 .7em; }
+      .markdown-section h2 { font-size: 1.5em; font-weight: 750; letter-spacing: -.2px; color: var(--fg); margin-top: 2.2em; padding-bottom: .35em; border-bottom: 1px solid var(--border); }
+      .markdown-section h3 { font-size: 1.22em; font-weight: 700; letter-spacing: -.1px; color: var(--accent); margin-top: 1.7em; }
+      .markdown-section h4 { font-size: 1.02em; font-weight: 650; color: var(--accent2); margin-top: 1.4em; }
+      body.dark .markdown-section h3 { color: var(--accent); }
+      /* 行内代码：强调色淡底 pill —— 仅限非 pre 内（不污染代码块） */
+      .markdown-section :not(pre) > code {
+        background: color-mix(in srgb, var(--accent) 9%, var(--bg-elev));
+        color: var(--accent); border: 1px solid var(--border-soft);
+        padding: 2px 6px; border-radius: 6px; font-size: .88em;
+      }
+      body.dark .markdown-section :not(pre) > code {
+        background: color-mix(in srgb, var(--a1) 16%, #0e1422); color: color-mix(in srgb, var(--a1) 72%, #fff); border-color: #ffffff14;
+      }
+      /* 代码块：中性表面卡片，收紧内边距，去掉默认 2.2em 顶部留白与语言角标 */
+      .markdown-section pre {
+        background: color-mix(in srgb, var(--fg) 4%, var(--bg-elev)) !important;
+        border: 1px solid var(--border); border-radius: 12px;
+        padding: 15px 18px; margin: 1.4em 0; overflow: auto; position: relative;
+      }
+      .markdown-section pre::after { display: none; }
+      .markdown-section pre > code {
+        background: transparent !important; border: none; padding: 0; border-radius: 0;
+        color: var(--fg); font-size: .85em; line-height: 1.65;
+      }
+      body.dark .markdown-section pre { background: color-mix(in srgb, #fff 5%, var(--bg-elev)) !important; border-color: var(--border); }
+      body.dark .markdown-section pre > code { color: var(--fg); }
+      .markdown-section blockquote {
+        border-left: 3px solid var(--accent2);
+        background: linear-gradient(90deg, color-mix(in srgb, var(--accent2) 9%, transparent), transparent);
+        border-radius: 0 10px 10px 0; padding: 12px 18px; margin: 1.3em 0; color: var(--fg-soft);
+      }
+      .markdown-section blockquote p { color: var(--fg-soft); margin: 0; }
+      .markdown-section blockquote p + p { margin-top: .6em; }
+      /* GitHub 风格提示框 callout（> [!NOTE]/[!TIP]/[!IMPORTANT]/[!WARNING]/[!CAUTION]）—— 由 doneEach 转换 */
+      .markdown-section blockquote[data-callout] {
+        border-left: 3px solid var(--cc);
+        background: linear-gradient(90deg, color-mix(in srgb, var(--cc) 11%, transparent), transparent);
+      }
+      .markdown-section blockquote[data-callout] .callout-title { color: var(--cc); font-weight: 700; font-size: .9em; letter-spacing: .03em; margin-bottom: .35em; }
+      .markdown-section blockquote[data-callout='note']      { --cc: #3b82f6; }
+      .markdown-section blockquote[data-callout='tip']       { --cc: #10b981; }
+      .markdown-section blockquote[data-callout='important'] { --cc: var(--accent); }
+      .markdown-section blockquote[data-callout='warning']   { --cc: #f59e0b; }
+      .markdown-section blockquote[data-callout='caution']   { --cc: #ef4444; }
+      /* 表格：圆角卡片 + 淡淡的主题色表头带（仅 6% 强调色）+ 发丝行分隔，克制不用斑马纹 */
+      .markdown-section table { display: table; width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin: 1.5em 0; box-shadow: 0 1px 3px rgba(0, 0, 0, .04); }
+      /* 宽表格：doneEach 给每个表外包一层 .table-wrap 做横向滚动，避免长内容溢出到右侧目录；
+         窄表仍撑满（table width:max-content + min-width:100%）。滚动条默认隐藏、悬停才显示（同右侧目录） */
+      .markdown-section .table-wrap { overflow-x: auto; margin: 1.5em 0; border-radius: 12px; scrollbar-width: thin; scrollbar-color: transparent transparent; transition: scrollbar-color .3s; }
+      .markdown-section .table-wrap > table { width: max-content; min-width: 100%; margin: 0; }
+      .markdown-section .table-wrap:hover { scrollbar-color: #ccc transparent; }
+      body.dark .markdown-section .table-wrap:hover { scrollbar-color: #555 transparent; }
+      .markdown-section .table-wrap::-webkit-scrollbar { height: 8px; }
+      .markdown-section .table-wrap::-webkit-scrollbar-track { background: transparent; }
+      .markdown-section .table-wrap::-webkit-scrollbar-thumb { background: transparent; border-radius: 4px; transition: background .3s; }
+      .markdown-section .table-wrap:hover::-webkit-scrollbar-thumb { background: #ccc; }
+      body.dark .markdown-section .table-wrap:hover::-webkit-scrollbar-thumb { background: #555; }
+      .markdown-section table tr, .markdown-section table tr:nth-child(2n) { border: none; background-color: transparent; }
+      .markdown-section th {
+        background: color-mix(in srgb, var(--accent) 6%, var(--bg-elev));
+        color: var(--fg); font-weight: 650; text-align: left;
+        border: none; border-bottom: 1px solid var(--border-soft); padding: 11px 16px;
+      }
+      .markdown-section td { border: none; border-bottom: 1px solid var(--border-soft); color: var(--fg-soft); padding: 11px 16px; }
+      .markdown-section tbody tr:last-child td { border-bottom: none; }
+      .markdown-section tbody tr:hover { background: color-mix(in srgb, var(--accent) 4%, transparent); }
+
+      /* ---- 封面（参考 Chameleon：粒子背景 + 渐变标题 + pill + 按钮） ---- */
+      section.cover { background: var(--bg-elev) !important; }
+      section.cover .cover-main { position: relative; z-index: 1; color: var(--fg); }
+      section.cover .cover-main > h1, section.cover .cover-main > h1 a {
+        font-size: 54px; font-weight: 850; letter-spacing: -.5px; border: none;
+        background: var(--title-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+      }
+      section.cover blockquote { border: none; background: none; }
+      section.cover blockquote p { color: var(--fg-soft); font-size: 19px; }
+      .cover-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 12px; }
+      section.cover .cover-main .cover-btn { display: inline-block; border-radius: 12px; padding: 12px 28px; font-weight: 600; text-decoration: none; cursor: pointer; transition: transform .15s, box-shadow .15s; border: 1px solid var(--border) !important; color: var(--fg) !important; background: var(--bg-elev) !important; -webkit-text-fill-color: var(--fg) !important; }
+      section.cover .cover-main .cover-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px -14px rgba(0,0,0,.25); }
+      section.cover .cover-main .cover-btn-primary { background: var(--title-grad) !important; color: #fff !important; border: none !important; -webkit-text-fill-color: #fff !important; }
+      section.cover .pill { display: inline-block; font-size: 12px; padding: 3px 12px; border-radius: 999px; border: 1px solid var(--border); color: var(--fg-soft); background: var(--bg-elev); margin: 3px 4px; }
+      section.cover .pill.hot { border-color: color-mix(in srgb, var(--a3) 45%, transparent); color: var(--a3); }
+      #cover-canvas { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; pointer-events: none; }
+      body:has(section.cover.show) #right-toc, body:has(section.cover.show) #read-progress { display: none; }
+    </style>
+
+    <script>
+      (function () {
+        try {
+          var s = JSON.parse(localStorage.getItem('station-settings') || '{}');
+          var r = document.documentElement;
+          r.dataset.accent = s.accent || 'ocean';
+          if (s.fs) r.dataset.fs = s.fs;
+          if (s.width) r.dataset.width = s.width;
+          if (s.font) r.dataset.font = s.font;
+          if (s.leading) r.dataset.leading = s.leading;
+          r.dataset.nav = s.nav || 'cozy';
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="app">加载中...</div>
+
+    <!-- ===== Docsify Station：搜索（右移）+ 设置入口 ===== -->
+    <div id="read-progress"></div>
+
+    <button id="station-gear" title="阅读设置">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <div id="station-backdrop"></div>
+    <aside id="station-drawer" class="glass">
+      <div class="sd-head">
+        <span>阅读设置</span>
+        <button class="sd-close" id="station-sd-close" title="关闭">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="sd-body">
+        <button class="sd-search" id="station-search" title="搜索（⌘K）">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          搜索文档<kbd>⌘K</kbd>
+        </button>
+        <div class="sd-row">
+          <div class="sd-label">主题</div>
+          <div class="seg">
+            <button data-set="theme" data-val="auto">跟随系统</button>
+            <button data-set="theme" data-val="light">亮</button>
+            <button data-set="theme" data-val="dark">暗</button>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">强调色</div>
+          <div class="swatches">
+            <div class="swatch sw-aurora" data-set="accent" data-val="aurora" title="极光"></div>
+            <div class="swatch sw-ocean"  data-set="accent" data-val="ocean"  title="海洋"></div>
+            <div class="swatch sw-forest" data-set="accent" data-val="forest" title="森林"></div>
+            <div class="swatch sw-sunset" data-set="accent" data-val="sunset" title="暮光"></div>
+            <div class="swatch sw-mono"   data-set="accent" data-val="mono"   title="单色"></div>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">标题</div>
+          <div class="seg">
+            <button data-set="title" data-val="grad">渐变</button>
+            <button data-set="title" data-val="solid">纯色</button>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">字号</div>
+          <div class="seg">
+            <button data-set="fs" data-val="s">A−</button>
+            <button data-set="fs" data-val="m">A</button>
+            <button data-set="fs" data-val="l">A+</button>
+            <button data-set="fs" data-val="xl">A++</button>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">正文宽度</div>
+          <div class="seg">
+            <button data-set="width" data-val="compact">紧凑</button>
+            <button data-set="width" data-val="normal">标准</button>
+            <button data-set="width" data-val="wide">宽</button>
+            <button data-set="width" data-val="full">全宽</button>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">正文字体</div>
+          <div class="seg">
+            <button data-set="font" data-val="sans">无衬线</button>
+            <button data-set="font" data-val="serif">衬线</button>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">行距</div>
+          <div class="seg">
+            <button data-set="leading" data-val="tight">紧凑</button>
+            <button data-set="leading" data-val="normal">标准</button>
+            <button data-set="leading" data-val="relaxed">宽松</button>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">目录密度</div>
+          <div class="seg">
+            <button data-set="nav" data-val="compact">紧凑</button>
+            <button data-set="nav" data-val="cozy">标准</button>
+            <button data-set="nav" data-val="roomy">宽松</button>
+          </div>
+        </div>
+        <div class="sd-row">
+          <div class="sd-label">动效</div>
+          <div class="seg">
+            <button data-set="motion" data-val="full">开</button>
+            <button data-set="motion" data-val="reduced">减弱</button>
+          </div>
+        </div>
+        <div class="sd-row sd-toggle-row">
+          <div class="sd-label">专注模式 <kbd>F</kbd></div>
+          <button class="switch" data-toggle="zen" aria-label="专注模式"></button>
+        </div>
+        <div class="sd-row sd-toggle-row">
+          <div class="sd-label">菜单树 <kbd>M</kbd></div>
+          <button class="switch" data-toggle="menu" aria-label="菜单树"></button>
+        </div>
+        <div class="sd-row sd-toggle-row">
+          <div class="sd-label">右侧目录 <kbd>O</kbd></div>
+          <button class="switch" data-toggle="toc" aria-label="右侧目录"></button>
+        </div>
+        <div class="sd-row sd-toggle-row">
+          <div class="sd-label">阅读进度条 <kbd>B</kbd></div>
+          <button class="switch" data-toggle="progress" aria-label="阅读进度条"></button>
+        </div>
+        <div class="sd-foot">
+          <button class="sd-reset" id="station-sd-reset">恢复默认设置</button>
+        </div>
+      </div>
+    </aside>
+
+    <div id="station-cmdk">
+      <div class="cmdk-bg" id="station-cmdk-bg"></div>
+      <div class="cmdk-panel glass">
+        <div id="station-cmdk-search"></div>
+        <div id="station-cmdk-actions">
+          <div class="cmdk-hint">快捷操作</div>
+          <button class="cmdk-action" data-action="theme">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+            切换主题
+          </button>
+          <button class="cmdk-action" data-action="settings">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M4 12h2M18 12h2M12 4v2M12 18v2"/></svg>
+            打开阅读设置
+          </button>
+          <button class="cmdk-action" data-action="top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+            回到顶部
+          </button>
+          <button class="cmdk-action" data-action="home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            返回首页
+          </button>
+          <div class="cmdk-hint">视图切换</div>
+          <button class="cmdk-action" data-action="zen">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+            专注模式 <kbd>F</kbd>
+          </button>
+          <button class="cmdk-action" data-action="sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
+            收起 / 展开左侧菜单 <kbd>M</kbd>
+          </button>
+          <button class="cmdk-action" data-action="toc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M15 3v18"/></svg>
+            收起 / 展开右侧目录 <kbd>O</kbd>
+          </button>
+          <button class="cmdk-action" data-action="progress">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h7"/><path d="M3 8h18"/><path d="M3 16h12"/></svg>
+            阅读进度条 <kbd>B</kbd>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="station-toast" class="glass"></div>
+
+    <!-- 右侧固定目录 -->
+    <div id="right-toc">
+      <div class="toc-title" onclick="toggleToc()">
+        目录导航
+        <span class="collapse-icon">▼</span>
+      </div>
+      <div id="toc-content"></div>
+    </div>
+
+    <script>
+      // 目录收缩
+      function toggleToc() {
+        document.getElementById("right-toc").classList.toggle("collapsed");
+      }
+
+      // 右侧目录滚动条：默认隐藏，滚动时显示，停止 ~0.7s 后隐藏（hover 也显示）
+      (function () {
+        var toc = document.getElementById("right-toc");
+        if (!toc || toc.__sbBound) return;
+        toc.__sbBound = true;
+        var t = null;
+        toc.addEventListener("scroll", function () {
+          toc.classList.add("scrolling");
+          clearTimeout(t);
+          t = setTimeout(function () { toc.classList.remove("scrolling"); }, 700);
+        }, { passive: true });
+      })();
+
+      // ===== Docsify Station 设置系统（主题移入设置面板） =====
+      (function () {
+        var STORE = 'station-settings';
+        var DEFAULTS = { theme: 'light', accent: 'ocean', fs: 'm', width: 'normal', font: 'sans', leading: 'normal', nav: 'cozy', motion: 'full', progress: false, toc: true, zen: false, menu: true, title: 'grad' };
+        function read() { try { return JSON.parse(localStorage.getItem(STORE) || '{}'); } catch (e) { return {}; } }
+        var settings = Object.assign({}, DEFAULTS, read());
+        if (!localStorage.getItem(STORE)) { var old = localStorage.getItem('theme'); if (old === 'dark' || old === 'light') settings.theme = old; }
+        var mql = matchMedia('(prefers-color-scheme: dark)');
+        function save() { localStorage.setItem(STORE, JSON.stringify(settings)); }
+        function isDark() { return settings.theme === 'dark' || (settings.theme === 'auto' && mql.matches); }
+        function $(id) { return document.getElementById(id); }
+        function apply() {
+          var r = document.documentElement;
+          r.dataset.accent = settings.accent; r.dataset.fs = settings.fs; r.dataset.width = settings.width; r.dataset.font = settings.font; r.dataset.leading = settings.leading; r.dataset.nav = settings.nav; r.dataset.title = settings.title;
+          document.body.classList.toggle('dark', isDark());
+          document.body.classList.toggle('reduce-motion', settings.motion === 'reduced');
+          document.body.classList.toggle('zen', settings.zen);
+          document.body.classList.toggle('no-toc', !settings.toc);
+          document.body.classList.toggle('no-progress', !settings.progress);
+          document.body.classList.toggle('close', !settings.menu); // 左侧菜单树收起（docsify 原生 body.close）
+          refresh();
+        }
+        function set(k, v) { settings[k] = v; save(); apply(); }
+        function refresh() {
+          document.querySelectorAll('#station-drawer [data-set]').forEach(function (el) { el.classList.toggle('on', settings[el.dataset.set] === el.dataset.val); });
+          document.querySelectorAll('#station-drawer [data-toggle]').forEach(function (el) { el.classList.toggle('on', !!settings[el.dataset.toggle]); });
+        }
+        mql.addEventListener && mql.addEventListener('change', function () { if (settings.theme === 'auto') apply(); });
+
+        function openD() { $('station-drawer').classList.add('open'); $('station-backdrop').classList.add('open'); }
+        function closeD() { $('station-drawer').classList.remove('open'); $('station-backdrop').classList.remove('open'); }
+        $('station-gear').addEventListener('click', openD);
+        $('station-sd-close').addEventListener('click', closeD);
+        $('station-backdrop').addEventListener('click', closeD);
+        $('station-drawer').addEventListener('click', function (e) {
+          var s = e.target.closest('[data-set]'); if (s) { set(s.dataset.set, s.dataset.val); return; }
+          var t = e.target.closest('[data-toggle]'); if (t) { set(t.dataset.toggle, !settings[t.dataset.toggle]); }
+        });
+        $('station-sd-reset').addEventListener('click', function () { settings = Object.assign({}, DEFAULTS); save(); apply(); toast('已恢复默认设置'); });
+
+        var tt = null;
+        function toast(m) { var el = $('station-toast'); el.textContent = m; el.classList.add('show'); clearTimeout(tt); tt = setTimeout(function () { el.classList.remove('show'); }, 1800); }
+
+        // 左侧菜单树收起/展开（settings.menu 持久化 → apply 里切 body.close；抽屉开关/快捷键/命令面板三处同步）
+        function toggleSidebar() { set('menu', !settings.menu); toast(settings.menu ? '左侧菜单 已展开' : '左侧菜单 已收起'); }
+        function typingInField() { var el = document.activeElement; return !!el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT' || el.isContentEditable); }
+
+        // 命令面板：复用 docsify 搜索索引
+        var moved = false;
+        function ensure() { if (moved) return; var s = document.querySelector('.sidebar .search') || document.querySelector('.search'); if (s) { $('station-cmdk-search').appendChild(s); moved = true; } }
+        function openK() { closeD(); ensure(); $('station-cmdk').classList.add('open'); var i = document.querySelector('#station-cmdk-search input'); if (i) setTimeout(function () { i.focus(); i.select(); }, 30); sync(); }
+        function closeK() { $('station-cmdk').classList.remove('open'); sel = -1; }
+        function sync() {
+          var p = document.querySelector('#station-cmdk-search .results-panel');
+          var i = document.querySelector('#station-cmdk-search input');
+          var q = !!(i && i.value.trim());
+          if (p) p.classList.toggle('show', q);
+          var a = $('station-cmdk-actions'); if (a) a.style.display = q ? 'none' : 'block';
+        }
+        $('station-search').addEventListener('click', openK);
+        $('station-cmdk-bg').addEventListener('click', closeK);
+        $('station-cmdk-search').addEventListener('input', function () { sel = -1; clr(); sync(); });
+        $('station-cmdk').addEventListener('click', function (e) { if (e.target.closest('.matching-post a, .matching-post')) setTimeout(closeK, 0); });
+        $('station-cmdk-actions').addEventListener('click', function (e) {
+          var b = e.target.closest('[data-action]'); if (!b) return; var a = b.dataset.action; closeK();
+          if (a === 'theme') set('theme', isDark() ? 'light' : 'dark');
+          else if (a === 'settings') openD();
+          else if (a === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+          else if (a === 'home') window.location.hash = '#/';
+          else if (a === 'zen') { set('zen', !settings.zen); toast(settings.zen ? '专注模式 开' : '专注模式 关'); }
+          else if (a === 'sidebar') toggleSidebar();
+          else if (a === 'toc') { set('toc', !settings.toc); toast(settings.toc ? '右侧目录 显示' : '右侧目录 隐藏'); }
+          else if (a === 'progress') { set('progress', !settings.progress); toast(settings.progress ? '进度条 开' : '进度条 关'); }
+        });
+        var sel = -1;
+        function items() { return Array.prototype.slice.call(document.querySelectorAll('#station-cmdk-search .matching-post')); }
+        function clr() { items().forEach(function (i) { i.classList.remove('sel'); }); }
+        function move(d) { var it = items(); if (!it.length) return; sel = (sel + d + it.length) % it.length; clr(); var e = it[sel]; e.classList.add('sel'); e.scrollIntoView({ block: 'nearest' }); }
+        document.addEventListener('keydown', function (e) {
+          if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); $('station-cmdk').classList.contains('open') ? closeK() : openK(); return; }
+          if (e.key === 'Escape') {
+            if ($('station-cmdk').classList.contains('open')) { closeK(); return; }
+            if ($('station-drawer').classList.contains('open')) { closeD(); return; }
+            if (settings.zen) { set('zen', false); }
+            return;
+          }
+          if ($('station-cmdk').classList.contains('open')) {
+            if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+            else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+            else if (e.key === 'Enter') { var it = items(); if (sel >= 0 && it[sel]) (it[sel].querySelector('a') || it[sel]).click(); }
+            return;
+          }
+          // 单键快捷键：无修饰键、不在输入框、命令面板/设置抽屉未开时才触发（跨平台一致，无需 Cmd/Ctrl）
+          if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey || typingInField()) return;
+          if ($('station-drawer').classList.contains('open')) return;
+          var k = e.key.toLowerCase();
+          if (k === 'f') { e.preventDefault(); set('zen', !settings.zen); toast(settings.zen ? '专注模式 开' : '专注模式 关'); }
+          else if (k === 'm') { e.preventDefault(); toggleSidebar(); }
+          else if (k === 'o') { e.preventDefault(); set('toc', !settings.toc); toast(settings.toc ? '右侧目录 显示' : '右侧目录 隐藏'); }
+          else if (k === 'b') { e.preventDefault(); set('progress', !settings.progress); toast(settings.progress ? '进度条 开' : '进度条 关'); }
+        });
+
+        // 阅读进度条
+        var pr = $('read-progress'), st = null;
+        window.addEventListener('scroll', function () {
+          if (st) return;
+          st = setTimeout(function () {
+            var s = window.scrollY || document.documentElement.scrollTop;
+            var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            if (pr) pr.style.width = (h > 0 ? s / h * 100 : 0) + '%';
+            st = null;
+          }, 40);
+        }, { passive: true });
+
+        apply();
+      })();
+
+      // Docsify 配置
+      window.$docsify = {
+        name: "AI PM 面试 · 公司专题",
+        repo: "",
+        // 自包含站点：index.html 与内容同级，basePath 默认相对自身目录
+        loadSidebar: "_sidebar.md",
+        coverpage: "_coverpage.md",
+        onlyCover: true,
+        auto2top: false, // 回顶/锚点定位由 doneEach 自管（见下方导航滚动）
+        maxLevel: 1,
+        subMaxLevel: 0,
+
+        search: {
+          paths: "auto",
+          placeholder: "搜索...",
+          noData: "无结果",
+        },
+
+        copyCode: {
+          buttonText: "复制",
+          successText: "已复制",
+        },
+
+        pagination: {
+          previousText: "上一章",
+          nextText: "下一章",
+        },
+
+        zoom: {
+          selector: ".mermaid svg, img",
+          background: "rgba(0,0,0,0.8)",
+          delay: 300,
+        },
+
+        // 右侧目录生成插件
+        plugins: [
+          function (hook) {
+            hook.doneEach(function () {
+              // 左侧菜单树滚动条：docsify 动态生成 .sidebar，首次渲染后绑定（滚动时显示，停 ~0.7s 隐藏；hover 也显示）
+              (function () {
+                var sb = document.querySelector(".sidebar");
+                if (!sb || sb.__sbBound) return;
+                sb.__sbBound = true;
+                var st = null;
+                sb.addEventListener("scroll", function () {
+                  sb.classList.add("scrolling");
+                  clearTimeout(st);
+                  st = setTimeout(function () { sb.classList.remove("scrolling"); }, 700);
+                }, { passive: true });
+              })();
+              // 导航滚动自管：有 ?id= 锚点→滚到该小节；纯切页→回顶（docsify 在本设置下不滚锚点、也会继承上页滚动位置）
+              (function () {
+                function go() {
+                  var hash = location.hash, route = hash.split("?")[0];
+                  var m = hash.match(/[?&]id=([^&]+)/);
+                  if (m) {
+                    var el = document.getElementById(decodeURIComponent(m[1]));
+                    if (el) window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - 16);
+                  } else if (route !== window.__lastRoute) {
+                    window.scrollTo(0, 0); document.documentElement.scrollTop = 0;
+                  }
+                  window.__lastRoute = route;
+                }
+                go();
+                if (!window.__navBound) {
+                  window.__navBound = true; // 同页内点目录锚点不触发 docsify 重渲染，补监听
+                  window.addEventListener("hashchange", function () { setTimeout(go, 30); });
+                }
+              })();
+              // 高亮当前文档 + 选中项自动滚入侧栏可视区。
+              // norm 取最后一个 # 之后（兼容 file:// 完整 href）、剥 ?id 与 .md、统一前导斜杠。
+              // 延时补两次：盖过 docsify 内建高亮在 file://(offline.html) 下匹配失败后清空 active 的情况。
+              (function () {
+                function hl() {
+                  var norm = function (h) {
+                    h = (h || "").toString();
+                    var i = h.lastIndexOf("#"); if (i >= 0) h = h.slice(i + 1);
+                    h = h.split("?")[0].replace(/\.md$/i, "");
+                    try { h = decodeURIComponent(h); } catch (e) {}
+                    h = h.replace(/\/(readme|index)$/i, "").replace(/\/+$/, ""); // 目录索引归一：/README、/index、尾斜杠 视为同一页
+                    if (h.charAt(0) !== "/") h = "/" + h;
+                    return h;
+                  };
+                  var path = norm(location.hash), activeA = null;
+                  document.querySelectorAll(".sidebar-nav a").forEach(function (a) {
+                    var on = norm(a.getAttribute("href")) === path;
+                    a.classList.toggle("active", on);
+                    var li = a.closest("li");
+                    if (li) li.classList.toggle("active", on);
+                    if (on) activeA = a;
+                  });
+                  if (activeA) {
+                    var sb = document.querySelector(".sidebar");
+                    if (sb) {
+                      var aR = activeA.getBoundingClientRect(), sR = sb.getBoundingClientRect();
+                      if (aR.top < sR.top + 8 || aR.bottom > sR.bottom - 8) {
+                        sb.scrollTop += (aR.top - sR.top) - (sR.height - aR.height) / 2;
+                      }
+                    }
+                  }
+                }
+                hl(); setTimeout(hl, 0); setTimeout(hl, 80);
+                if (!window.__hlBound) {
+                  window.__hlBound = true;
+                  window.addEventListener("hashchange", function () { setTimeout(hl, 30); });
+                }
+              })();
+
+              // GitHub 风格提示框：把 > [!TYPE] blockquote 转成带标题的彩色 callout
+              (function () {
+                var LABEL = { NOTE: "提示", TIP: "建议", IMPORTANT: "重点", WARNING: "注意", CAUTION: "警告" };
+                document.querySelectorAll(".markdown-section blockquote").forEach(function (bq) {
+                  if (bq.dataset.callout) return;
+                  var first = bq.querySelector("p");
+                  if (!first) return;
+                  var m = first.innerHTML.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(<br\s*\/?>)?\s*/i);
+                  if (!m) return;
+                  var type = m[1].toUpperCase();
+                  bq.dataset.callout = type.toLowerCase();
+                  first.innerHTML = first.innerHTML.slice(m[0].length);
+                  if (!first.textContent.trim()) first.remove();
+                  var title = document.createElement("div");
+                  title.className = "callout-title";
+                  title.textContent = LABEL[type];
+                  bq.insertBefore(title, bq.firstChild);
+                });
+              })();
+
+              // 宽表格外包一层 .table-wrap 以横向滚动（避免长内容溢出到右侧目录）
+              (function () {
+                document.querySelectorAll(".markdown-section table").forEach(function (t) {
+                  var p = t.parentNode;
+                  if (!p || (p.classList && p.classList.contains("table-wrap"))) return;
+                  var w = document.createElement("div");
+                  w.className = "table-wrap";
+                  p.insertBefore(w, t);
+                  w.appendChild(t);
+                });
+              })();
+
+              const content = document.querySelector(".markdown-section");
+              const tocContent = document.getElementById("toc-content");
+
+              if (!content || !tocContent) return;
+
+              const headings = content.querySelectorAll("h1, h2, h3, h4");
+              let html = "";
+
+              headings.forEach((heading) => {
+                const level = heading.tagName.toLowerCase();
+                const text = heading.textContent;
+                const id = heading.id;
+
+                if (id) {
+                  const currentRoute = window.location.hash.split("?")[0];
+                  const href = `${currentRoute}?id=${encodeURIComponent(id)}`;
+                  html += `<a href="${href}" class="${level}">${text}</a>`;
+                }
+              });
+
+              tocContent.innerHTML = html;
+
+              const links = tocContent.querySelectorAll("a");
+
+              function updateActive() {
+                let current = "";
+                for (let i = 0; i < headings.length; i++) {
+                  const h = headings[i];
+                  if (h.id && h.getBoundingClientRect().top <= 120) current = h.id;
+                }
+                if (!current) {
+                  for (let j = 0; j < headings.length; j++) { if (headings[j].id) { current = headings[j].id; break; } }
+                }
+                let activeLink = null;
+                links.forEach((link) => {
+                  const linkId = decodeURIComponent((link.getAttribute("href").split("id=")[1]) || "");
+                  const on = linkId === current;
+                  link.classList.toggle("active", on);
+                  if (on) activeLink = link;
+                });
+                // 仅在高亮项「变化时」滚动 TOC，且瞬时（不用 smooth）——消除滚动卡顿
+                if (activeLink && current !== updateActive._last) {
+                  updateActive._last = current;
+                  activeLink.scrollIntoView({ block: "nearest" });
+                }
+              }
+              // 更新器挂全局；滚动监听全站只注册一次（避免每翻一页累积监听器）
+              window.__tocUpdate = updateActive;
+              if (!window.__tocScrollBound) {
+                window.__tocScrollBound = true;
+                let ticking = false;
+                window.addEventListener("scroll", function () {
+                  if (ticking) return;
+                  ticking = true;
+                  requestAnimationFrame(function () {
+                    if (window.__tocUpdate) window.__tocUpdate();
+                    ticking = false;
+                  });
+                }, { passive: true });
+              }
+              updateActive();
+            });
+          },
+        ],
+      };
+    </script>
+
+    <!-- Docsify -->
+    <script>
+window.__MD__ = {"/README.md": "# 公司专题总览\n\n> 这是面试备战的「公司专题」分册，独立于主站的基础备战包。一家公司一个目录，按你实际要面的岗位逐家补充。\n\n## 这个专题解决什么\n\n主站那份《AI 产品经理面试备战》是**基础文档**——AI 技术速通、产品方法论、案例库、答题框架、个人经历改造、临场速记，是不分公司的通用底座，内容稳定、不随某次面试变动。\n\n但真正坐到面试桌前，光有通用底座不够。每家公司有自己的**产品、技术栈、行业、竞品、岗位侧重**，面试官想听的是「你了解我们、你能接我们的活」。这个专题就是补这一层：\n\n- **公司做什么、技术壁垒在哪**——让你聊到点子上，显得做过功课。\n- **这个赛道的行业认知**——尤其当它和你主场（C 端）不同时，先把陌生领域补成能对话。\n- **这个岗位到底要什么**——把 JD 逐条翻译成考点，再对照你的底牌找匹配与缺口。\n- **针对性的题、话术、反问、谈薪**——临场能直接套用。\n\n一句话：**基础文档让你「会」，公司专题让你「对得上这家」。** 两份配合用。\n\n## 怎么用一家公司的专题\n\n每家公司的目录都按同一套结构展开，建议按顺序读一遍，临考前重点回到「速览」和「匹配度」两篇：\n\n1. **速览 · 作战地图**——一页纸看清公司、岗位、你的强弱、必背谈资，时间紧只看这篇。\n2. **公司与产品全景 / 行业速通 / 竞品格局**——把这家公司和它所在的赛道搞懂，补认知。\n3. **岗位 JD 逐条拆解**——把这个岗位想听的话翻译出来。\n4. **候选人匹配度与 gap 改造**——你的经历怎么对接、缺口怎么正面回应（最关键的一篇）。\n5. **针对性面试题与答法 / 反问与谈薪**——临场弹药。\n\n## 已收录公司\n\n| 公司 | 岗位 | 赛道 | 状态 |\n|------|------|------|------|\n| [实在智能](01-实在智能/README.md) | AI 产品经理 | 企业级 Agent + RPA / 数字员工（to B） | 已完成 · 首发 |\n\n> 后续按需要面的公司继续往这张表里加。每家独立成册，互不影响，也不动主站的基础文档。\n", "/_coverpage.md": "<canvas id=\"cover-canvas\"><\/canvas>\n\n# AI PM 面试 · 公司专题\n\n> 按公司逐家拆解的针对性备战包\n>\n> **基础认知在主站打底，这里只装「这家公司、这个岗位」要打的硬仗**\n\n<span class=\"pill hot\">实在智能 · 首发<\/span> <span class=\"pill\">Agent + RPA<\/span> <span class=\"pill\">to B 产品<\/span> <span class=\"pill\">杭州 · 余杭<\/span> <span class=\"pill\">持续扩充<\/span>\n\n<p class=\"cover-actions\">\n  <a class=\"cover-btn cover-btn-primary\" href=\"#/01-实在智能/README\">进入实在智能专题 →<\/a>\n  <a class=\"cover-btn\" href=\"#/README\">这个专题怎么用 →<\/a>\n<\/p>\n", "/_sidebar.md": "- 开始\n  - [公司专题总览](README.md)\n\n- 实在智能 · AI 产品经理\n  - [速览 · 作战地图](01-实在智能/README.md)\n  - [公司与产品全景](01-实在智能/01-公司与产品全景.md)\n  - [RPA 与 Agent 行业速通](01-实在智能/02-RPA与Agent行业速通.md)\n  - [竞品格局](01-实在智能/03-竞品格局.md)\n  - [岗位 JD 逐条拆解](01-实在智能/04-岗位JD逐条拆解.md)\n  - [候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md)\n  - [针对性面试题与答法](01-实在智能/06-针对性面试题与答法.md)\n  - [反问环节与谈薪](01-实在智能/07-反问环节与谈薪.md)\n", "/01-实在智能/07-反问环节与谈薪.md": "# 反问环节与谈薪\n\n> 反问不是走过场——它是你最后一次「show 出你懂这家公司」的机会，也是收集决策信息的窗口。谈薪则决定这趟值不值。这一篇给你分轮次的反问清单、要避的雷，以及 18–35K·15 薪怎么谈。\n\n## 一、反问的两个目的\n\n1. **展示**：问出「做过功课、想得深」的问题，给面试官留个好印象（尤其一面/总监面）。\n2. **收集**：拿到帮你判断 offer 的真实信息（团队、节奏、成长、稳定性）。\n\n每轮留 1–2 个问题即可，按对面的角色挑。\n\n## 二、分轮次反问清单\n\n### 面专业/直属 leader（聊业务和产品）\n\n- 「实在 Agent 现在落地最深的是哪几个行业场景？产品团队当前最想攻克的难点是什么？」（显得你关心真实业务，不是只看了官网）\n- 「ISSUT 的屏幕语义理解在实际客户环境里，遇到的最大挑战是识别准确率还是复杂流程的稳定性？」（这个问题一出，面试官会知道你真懂技术）\n- 「这个岗位负责的是哪条产品线 / 哪个客户群？是偏平台通用能力，还是偏行业场景化？」（搞清你实际要干的活）\n- 「团队怎么衡量一个 Agent 产品做得好不好？主要看哪些核心指标？」（把话题引到你强项评估上，还能听到他们的真实指标体系）\n\n### 面交叉/总监（聊战略和团队）\n\n- 「在通用大模型和 Computer Use 越来越强的趋势下，公司怎么看自研 TARS + ISSUT 这条路的长期壁垒？」（高质量战略问题，体现你有行业判断）\n- 「产品团队和售前、交付的协作流程是怎样的？产品经理在客户需求到落地的链条里，话语权有多大？」（既问协同、又探你能否主导）\n- 「您觉得这个岗位上做得好的人，半年内最该做出什么成果？」（问清期待，也帮你判断节奏）\n\n### 面 HR（聊成长、文化、稳定性）\n\n- 「团队目前的规模和构成？新人会有怎样的带教或成长路径？」\n- 「公司现在处在快速扩张期，产品团队的工作节奏大概是怎样的？」（侧面问作息，比直接问\"加班吗\"得体）\n- 「这个岗位是新增还是补位？团队对'从 C 端转过来的 AI 产品人'是怎么看的？」（探匹配预期）\n\n## 三、反问要避开的雷\n\n- 不要一上来问薪资福利假期（留到 HR 谈薪环节）。\n- 不要问能在官网/JD 一眼查到的（「你们做什么的」——等于告诉对方你没做功课）。\n- 不要问「我表现怎么样 / 能过吗」（显得不自信）。\n- 不要连珠炮问一堆，挑最相关的 1–2 个，问完认真听、适当追问。\n- 不要问太尖锐的负面（「听说你们加班很凶？」），换成中性的「节奏怎样」。\n\n## 四、谈薪：18–35K·15 薪怎么拆、怎么谈\n\n### 先看清这个 offer\n\n- **薪资区间**：18–35K·15 薪 = 年薪约 27 万–52.5 万。区间跨度大，说明公司对经验差异容忍度高、**有谈判空间**，也意味着定级会看你面试表现和经历成色。\n- **15 薪含义**：月薪 ×15 个月。常见结构 = 12 个月工资 + 固定 13 薪 + 约 2 个月绩效（浮动）。实在智能招聘页标的是「13 薪 + 年终奖」，意味着**至少 13 薪确定，剩余看绩效**。\n\n### 杭州行情参照（帮你定锚点）\n\n- 杭州 AI 产品经理平均月薪约 2.5 万上下；3–5 年经验段中高水平在 25–35K。\n- 你资历约 1 年但 AI 经历密度高、岗位对口——**别用\"1 年经验\"自我设限去对标区间下限**，要用\"全链路实操 + 岗位高匹配\"往中段及以上谈。\n- （行情数据来自公开薪酬报告，口径不一，作参考锚点，不必精确引用。）\n\n### 报价策略\n\n1. **先问后报**：HR 问期望时，可以先反问「贵司这个岗位的定级区间大概怎么分布」，拿到信息再报。\n2. **锚定要有依据**：报价基于「市场行情 + 我的对口经历」，而不是「我现在多少、涨百分之几」。可以说「结合市场和我做过的 AI Agent 全链路经历，我希望对标 28–32K 这个区间」——落在区间中上段，留谈判余地。\n3. **用成果撑价**：把 460 万用户、准确率 97.5%、CAG 降本 80% 这些硬数字摆出来，让对方觉得你值这个价。\n4. **别只盯月薪**：问清楚绩效那 2 个月**历年实际发放比例**（创业公司这块常有浮动），还有期权、调薪机制。\n\n### 谈薪话术示例\n\n> 「我对这个岗位和实在智能的方向都很认可，薪资上希望能匹配我的经历价值。我做过 460 万用户的 AI Agent 全链路，从 RAG 到评估闭环到成本优化都拿到了实际结果。结合杭州的市场行情，我期望在 28–32K 之间，具体我也想听听贵司的定级考量，我们可以一起看。另外想确认一下，15 薪里绩效部分历年大概是怎么兑现的？」\n\n## 五、offer 决策：拿到了，怎么判断要不要\n\n| 考量 | 怎么看 |\n|------|--------|\n| 成长 | C 轮创业公司、Agent 头部赛道，能深度参与企业级 Agent 落地，对你补 to B / 行业 know-how 是难得的练兵场 |\n| 节奏 | 创业 + 阿里系 + 项目交付，强度大概率不低，提前有心理准备（反问环节多探） |\n| 稳定性 | C 轮、有政府背书、客户基础在，相对稳，但创业公司变数本就比大厂大 |\n| 钱 | 看最终定级 + 绩效兑现 + 期权，别只看月薪上限 |\n| 长期 | 押注 Agent 落地这件事你认不认——认，这就是个好平台；不认，再高薪也别来 |\n\n> 一句话：这是一个**用 C 端经历换 to B / Agent 落地深度**的机会。如果你想往「企业级 Agent」这个方向扎，它的成长价值可能比短期薪资更值得看。\n\n## 收尾\n\n整个专题到这里就完整了。临考前回到 [速览作战地图](01-实在智能/README.md) 再过一遍必背谈资和最短路径，深呼吸，你的牌比你以为的好。\n", "/01-实在智能/01-公司与产品全景.md": "# 公司与产品全景\n\n> 这一篇把实在智能「是谁、做什么、技术硬在哪、客户是谁」一次讲透。目标不是背百科，而是让你在面试里聊到点子上——既显得做过功课，又能把话头引向自己的经历。读的时候盯住每节末尾的「面试怎么用」。\n\n## 一、公司基本盘\n\n| 维度 | 事实 | 备注 |\n|------|------|------|\n| 全称 | 浙江实在智能科技有限公司（简称实在智能） | 英文/域名 ai-indeed |\n| 成立 | 2018 年 | 至今约 7 年 |\n| 总部 | 杭州余杭区 · 未来科学园（南湖一带） | 岗位就在这里 |\n| 定位 | 企业级 AI Agent + RPA、数字员工赛道头部 | 自述「AGI 大模型 + 超自动化领跑人机协同」 |\n| 资质 | 国家级专精特新「小巨人」、国家高新技术企业、CMMI-5 认证、连续多年「AI 准独角兽」 | 「国家重点软件企业」一说见于宣传，未见官方批文，引用谨慎 |\n| 融资 | 2023 年 12 月完成近 2 亿元 C 轮（金泰富资本、安吉智慧谷领投）；此前已多轮，投资方含君联资本、松禾资本、英特尔资本等 | C 轮后未见新一轮公开融资 |\n| 团队 | 约 300 人，研发占比过半，约半数来自阿里/腾讯/百度/美团等 | 创业公司，扩张期 |\n| 使命口号 | 「为全社会贡献 100 万个数字员工」 | 文化叙事的锚 |\n\n**创始人孙林君**值得单记：吉林大学数学本科、大连理工人工神经网络方向硕士，在阿里约 10 年做到资深算法专家（P9），主导过支撑花呗、借呗的「诚信模型体系」。这条「金融风控算法 → 企业智能体」的轨迹很顺，也解释了公司为什么金融、运营商客户做得深。\n\n> [!NOTE]\n> 融资轮次、团队人数这类数字，记一个量级即可（「C 轮近 2 亿」「约 300 人」），别背具体到个位——面试官不会考你数字，但你张口数字错了反而扣分。\n\n## 二、核心产品：实在 Agent\n\n实在智能对外的主打产品是**「实在 Agent」**，定位「企业级通用智能体 / 数字员工」，2023 年 8 月首发，2025 年 3 月升级为「实在 Agent + 企业大脑平台」。它不服务 C 端个人，而是给企业当「数字员工」干活——你用自然语言说要做什么，它自己理解、规划、操作各种软件把活干完，主打一句话叫**「你说 PC 做」**。\n\n产品矩阵大致这几块：\n\n- **实在 Agent + 企业大脑平台**：核心。企业大脑提供四样东西——专属知识库（RAG）、业务系统操作流程、多模型接入（兼容自研 TARS 以及 DeepSeek/GPT/智谱等）、私有化部署。\n- **塔斯 AI 助理**：手机端智能体，支持语音指令。\n- **软硬一体机**：和华为（昇腾/鲲鹏）、惠普（Z 系列）、天翼云联合推出，支持私有化与信创环境。\n- **智能体市场**：2026 年初推出，提供财务对账、发票验真、电商上新等「开箱即用」的场景技能包。\n\n**怎么收费/交付**（公开信息有限）：以私有化部署 + 项目制交付为主，辅以场景技能包，属于**大客户方案型**打法——这点很重要，决定了这个产品经理岗位重「客户、交付、售前协同」（见 [岗位 JD 逐条拆解](01-实在智能/04-岗位JD逐条拆解.md)）。\n\n> **面试怎么用**：当被问「你了解我们产品吗」，别复述官网。讲结构——「实在 Agent 是把大模型的决策能力，架在你们多年积累的 RPA 执行能力上，做成能自主干活的数字员工」，再追一句你自己的判断（比如 to B Agent 的关键是把 ROI 算清楚，这正好接你 CAG 降本 80% 的经历）。\n\n## 三、三大自研技术：大脑 + 眼睛 + 手脚\n\n这是实在智能讲了无数遍的技术叙事，**必须讲得比面试官还顺**。\n\n```mermaid\ngraph LR\n    classDef brain fill:#2B6CB0,stroke:#1E5090,stroke-width:2px,color:#fff\n    classDef eye fill:#276749,stroke:#1E5038,stroke-width:2px,color:#fff\n    classDef hand fill:#C05621,stroke:#9C4221,stroke-width:2px,color:#fff\n    classDef out fill:#EDF2F7,stroke:#A0AEC0,stroke-width:1px,color:#4A5568,stroke-dasharray:5 5\n\n    A[\"TARS 大模型<br/>大脑 · 思考与规划\"]:::brain\n    B[\"ISSUT 屏幕语义理解<br/>眼睛 · 看懂界面\"]:::eye\n    C[\"RPA / IPA 执行引擎<br/>手脚 · 操作软件\"]:::hand\n    D[\"数字员工<br/>能思考·会行动·可闭环·全自主\"]:::out\n\n    A --> D\n    B --> D\n    C --> D\n```\n\n**① TARS 大模型（大脑）**——2023 年 6 月发布的自研大模型，提供 1.1B / 7B / 13B / 70B 多版本，走完了预训练、SFT、RLHF 三段式训练。卖点是「效果可用、成本可控、可私有化、全栈支持国产信创（昇腾/鲲鹏）」。最新多模态版本 TARS-VL 支持屏幕视觉理解。负责理解你的意图、把任务拆成步骤、动态决策。\n\n> 公司宣传里有「步骤拆解准确率超越 GPT-4」「GUI 元素理解比 GPT-4o 高 4%」等说法，**属企业自测、未见第三方独立验证**——你心里清楚就行，面试别当客观事实复述。\n\n**② ISSUT 智能屏幕语义理解（眼睛）——最核心的差异化，重点记**。全称 Intelligent Screen Semantic Understanding，基于计算机视觉/多模态，让机器像人眼一样直接「看懂」屏幕上的按钮、输入框、表格、弹窗。它解决的是**传统 RPA 的致命痛点**：\n\n- 传统 RPA 靠坐标或元素 ID 定位界面，必须依赖软件开放 API，企业里大量老旧 ERP/客户端没有 API 就用不了，而且界面一改、分辨率一变流程就崩。\n- ISSUT 像人一样「看」界面再驱动鼠标键盘，**无 API 也能操作任意软件**，30 年前的老系统和最新 SaaS 都能接，非侵入式。\n\n这就是实在智能相对来也、弘玑等对手最常被拿来说事的技术壁垒，对标海外就是 Anthropic Computer Use、OpenAI Operator（详见 [竞品格局](01-实在智能/03-竞品格局.md)）。\n\n**③ RPA / IPA 执行引擎（手脚）**——从早期「实在 RPA」演化来，负责流程录制、元素拾取、流程编排，把大脑的决策真正落到键鼠操作上。亮点是「文生流程」：一句话描述需求，自动生成可执行的自动化流程。\n\n> **面试怎么用**：把这套「大脑+眼睛+手脚」和你的杭小育类比，会非常加分——你的 RAG 是「知识大脑」、Rerank/召回是「检索的眼睛」、Text2SQL Agent 是「取数的手脚」。你能用自己做过的东西去类比它的架构，本身就证明了理解力。\n\n## 四、从 RPA 到 Agent：四代演进\n\n| 代际 | 时间 | 形态 | 关键变化 |\n|------|------|------|----------|\n| 一代 | 2018–2021 | 专家模式 RPA | 传统桌面 RPA，要专业开发录流程，精准但刚性 |\n| 二代 | 2021–2022 | 简易模式 IPA | 引入 ISSUT 视觉感知，图形化「点选用」，门槛从专家降到普通员工 |\n| 三代 | 2022–2023 | 对话模式 ChatRPA | 集成对话 AI，自然语言生成流程；2023 年 6 月发布 TARS 大模型 |\n| 四代 | 2023 至今 | 实在 Agent | 大脑+眼睛+手脚三位一体，自主规划执行；2025 年 3 月升级企业大脑平台 |\n\n> **面试怎么用**：这条线能讲出「战略定力」——2021 年就投入做视觉感知（ISSUT），2023 年自研大模型，不是等通用大模型火了才跟风转型，而是用多年攒的 RPA「积木」承接大模型的决策力。被问「你怎么看公司的发展路径」时，这是高质量的回答素材。\n\n## 五、客户与落地案例\n\n官方口径累计服务 5000+ 家企业，覆盖金融、运营商、能源、制造、电商新零售、政府。几个标杆案例（**均为公司披露口径，引用时保留意识**）：\n\n| 行业 | 客户 | 场景 | 效果（公司口径） |\n|------|------|------|------------------|\n| 运营商 | 河北电信 | 采购、资费核算等 20+ 场景 | 单场景 2 小时→10 分钟；采购取数年省 745 人天，推广至全省 11 地市 |\n| 运营商 | 福建联通 | 客服自动化 | 处理效率提升 98%，报告从 15 分钟→30 秒 |\n| 制造 | 吉利汽车 | 财务（进项税抵扣、发票校验、回单打印） | 效率提升 300%，数据正确性 100%，人力成本省 70% |\n| 电商 | 周黑鸭 | 近 200 个自动化场景 | 年省成本 300 万+ |\n| 金融 | 天翼数科 | 贷前审核材料审查（大模型+视觉 OCR） | 审核效率提升 300% |\n\n这些案例的共同点：**都是「重复人工 → 可量化省人/省时」**，这正是 to B Agent 卖得动的根本——ROI 能算清楚（见 [RPA 与 Agent 行业速通](01-实在智能/02-RPA与Agent行业速通.md) 的商业化一节）。\n\n> **面试怎么用**：记住 2–3 个具体案例（河北电信取数、吉利财务最好记），聊到客户价值时顺手举例，比空谈「降本增效」有力得多。\n\n## 六、最新动态（2024–2026，临场热点）\n\n- **2025 年 3 月**：浙江省长刘捷专程调研实在智能，称其技术「填补国内流程自动化领域空白」——罕见的省级高层背书。\n- **2025 年 3 月**：发布「实在 Agent + 企业大脑平台」，宣布企业级通用智能体进入产业落地阶段；产品兼容 DeepSeek 等开源模型。\n- **2025 年**：入选中科院《互联网周刊》「AI 智能体服务商 TOP100」；与河北电信联合案例入选 WAIC 2025 中国信通院《「人工智能+」行业标杆案例》。\n- **2026 年 1 月**：「驭 AI·无界」品牌峰会，发布惠普 Z 系列 AI 数字员工一体机、智能体市场。\n- **出海**：日本（东京）、马来西亚设子公司，孙林君受访称产品已在日本「近百家大公司上线」（无具体名单，存疑）。\n\n## 七、企业文化与工作强度（客观看）\n\n文化关键词：客户第一、使命必达、自驱、皮实、激情；办公室有动漫元素，员工有动漫花名（孙林君花名「功夫熊猫阿宝」）。福利标注含 13 薪、年终奖、七险一金、年度体检、股票期权。\n\n**工作强度**：脉脉/看准网的真实匿名评价本次未能抓取核实。综合「C 轮创业公司 + 阿里系团队 + 项目制交付」判断，**节奏偏快、强度不低的概率较大**，建议你面试前自己去脉脉、看准网搜「实在智能」看一手评价，也可以在面试的反问环节侧面问作息（话术见 [反问环节与谈薪](01-实在智能/07-反问环节与谈薪.md)）。\n\n## 下一步\n\n公司搞懂了，接着补这个赛道的认知——RPA 到底是什么、和你熟的 C 端 Agent 差在哪：[RPA 与 Agent 行业速通](01-实在智能/02-RPA与Agent行业速通.md)。\n", "/01-实在智能/06-针对性面试题与答法.md": "# 针对性面试题与答法\n\n> 主站基础文档有通用高频题和万能框架，这一篇只装**这家公司、这个岗位**特有的题：Agent/RPA 专项、to B 协同、结合实在业务的设计题、客户问题处理，外加针对性的追问预案。答法给骨架和要点，关键题给你能直接套的版本。\n\n## 一、Agent / RPA 专项题\n\n### Q1 传统 RPA 在界面一改就失败，AI Agent 怎么解决？你会怎么设计？\n\n**答题骨架**：先点痛点根因（传统 RPA 靠坐标/元素 ID 硬定位）→ 再讲解法（屏幕语义理解，像人一样\"看懂\"界面）→ 落到产品设计（容错与回退）。\n\n**要点**：「根因是定位方式太脆——绑死在坐标和元素 ID 上。解法就是你们 ISSUT 这条路：用视觉+多模态让机器理解'这是个提交按钮'而不是'第 3 行第 2 列'，界面改版也认得。产品上我还会加两层保险：执行前做元素置信度校验，低于阈值就走兜底；关键操作留可视化日志和截图，方便追溯。」\n\n### Q2 你怎么衡量一个 to B Agent 好不好用？建立什么评估体系？\n\n**这是你的高光题，往死里答。** 骨架：分层指标 + 闭环方法论 + 结合自己经历。\n\n**要点**：「我会分三层看：任务层——任务成功率、尤其 passᵏ（连续成功率，单次高不代表稳）；体验层——人工接管率、端到端延迟；价值层——ROI，省的人力对部署维护成本。光有指标不够，关键是闭环：建离线评估集兜底回归，线上抽检抓真实 Badcase，归因后回灌迭代。我在 C 端就搭过这套'离线集+线上抽检+Badcase 闭环'，做到准确率 97.5%，方法论换到 to B Agent 直接能用，只是把'回答准不准'换成'任务成不成、接管率低不低'。」\n\n### Q3 Agent 执行出错（比如误删了客户数据）怎么办？产品层面怎么避免？\n\n骨架：事后处理 + 事前设计，两条都要。\n\n- **事前设计**：高风险操作（删除/支付/不可逆）必须人工确认（Human-in-the-Loop）；权限最小化；干预前做 dry-run 预演让用户看到将执行什么；全程留操作日志可回溯。\n- **事后处理**：先止损（暂停同类流程）、定责（查日志定位是模型决策错还是执行错）、复盘补防线、对客户透明沟通。\n- **金句**：「to B Agent 的设计哲学和 C 端不同——C 端可以'先跑起来再优化'，to B 是'宁可多兜底也不能错一次'，因为企业生产环境里一次错可能就是事故。」\n\n### Q4 怎么设计 Agent 的「人工兜底」，什么条件触发？怎么让用户觉得是优雅转接而非失败？\n\n骨架：触发条件 + 体验设计。\n\n- **触发条件**：置信度低于阈值、连续重试失败、识别为高风险操作、遇到规则外异常。可设熔断（如错误率 >15% 自动转人工）。\n- **体验设计**：转接时把已完成的步骤和上下文一起交给人，别让人从头来；给用户「Agent 已完成 80%，剩下需要您确认」的进度感，而不是冷冰冰报错。「兜底设计得好，用户感觉是'人机协同'；设计得差，用户感觉是'机器不行'——差别全在交接体验，这正好是我设计背景的发力点。」\n\n### Q5 RPA 适合什么、Agent 适合什么？混合架构怎么设计？\n\n要点：RPA 适合强规则、高稳定、高频重复（对账、录入）；Agent 适合非结构化输入、需要推理判断、流程多变的场景。混合架构=「Agent 做判断和编排（大脑），RPA 做确定性执行（手脚）」——这正是实在「大脑+眼睛+手脚」的逻辑，能说出来就赢了。\n\n## 二、to B 协同与客户问题处理\n\n### Q6 to B 的需求调研和 to C 有什么不同？你会怎么做？\n\n**先承认差异再讲方法**（你 C 端为主，诚实）：\n\n| 维度 | to B | to C |\n|------|------|------|\n| 决策链 | 出钱的（老板）≠ 用的（员工），要分别访谈 | 决策=使用 |\n| 需求来源 | 售前/销售带回、客户访谈、合同条款 | 用研、埋点、A/B |\n| 方式 | 上门/驻场、流程跟岗观察、关键人访谈 | 问卷、数据 |\n\n「关键差异是 to B 要同时听'买单的人'和'用的人'两套声音，还要分清'客户嘴上说的'和'真正的问题'——客户常给方案而非问题，要多问几个为什么。这块我在系统补，也想在你们这种贴近客户的环境里练。」\n\n### Q7 销售为了签单，答应了客户一个我们没有的功能，你怎么办？\n\n**不装经验，给判断框架**：「我会先冷静评估三件事——这是真痛点还是个例？影响多少客户、能不能复用？和产品方向是否一致？如果是有普适价值的真需求，排进版本并和销售对齐预期时间；如果只是单客户特例，评估是否走定制/插件，成本谁担；如果跟方向冲突，我会和销售一起给客户一个有诚意的替代方案，而不是硬塞进主线把产品做乱。核心是既不打销售的脸，也不让产品被单个订单绑架。」\n\n### Q8 一个大客户（年费 300 万）要一个只有他用的定制功能，做不做？\n\n要点：商业价值 vs 产品健康度的权衡。评估维度——这个客户的战略价值、功能能否抽象成通用能力、定制对架构和后续维护的负担。结论倾向：「能沉淀成通用能力就做进产品；纯一次性定制就走独立交付/项目层，和主产品解耦，别污染产品线。」体现你既懂商业又守产品底线。\n\n### Q9 上线新版本后，某客户的工作流全挂了，怎么应急？怎么从产品上避免？\n\n骨架：应急（止血→定位→修复→沟通）+ 长效（灰度发布、回滚机制、客户分级、变更前兼容性测试）。「to B 一个客户挂了就是 P0，应急第一原则是先恢复再追因。长效上，to B 必须做灰度和一键回滚，不能像 C 端那样全量推。」\n\n## 三、结合实在业务的设计题\n\n设计题统一套主站基础文档的「设计题万能框架」（背景→用户→目标→方案→指标→风险），这里给两道高频的，标出 to B 的特殊考量。\n\n### Q10 设计一个面向财务部门的 RPA / Agent（如凭证录入、发票校验）\n\n重点答**异常处理**（面试官最爱在这深挖）：\n\n- **用户与场景**：财务，每天大量发票/凭证，规则清晰但量大、错不起。\n- **核心流程**：取票据 → OCR/视觉识别 → 字段校验（金额、税号、抬头）→ 录入系统 → 异常分流。\n- **异常设计（关键）**：业务异常（金额对不上）转人工复核；系统异常（接口超时/页面变）自动重试+降级；模型异常（识别置信度低）标红待人工确认。设熔断阈值，错误率超标自动停并告警。\n- **指标**：处理成功率、人工复核率、单据处理时长、节省人天（ROI）。\n- 「财务场景的核心矛盾是'要快'和'零差错'，产品设计就是在自动化率和兜底之间找平衡——这和我做评估闭环时平衡准确率与成本是同一种思维。」\n\n### Q11 把一个现有的人工重复流程自动化，你怎么拆？怎么判断它适不适合自动化？\n\n骨架：**先评估适配性**（流程是否标准化、规则是否清晰、量是否够大、变动是否频繁——变动太频繁的不适合传统 RPA），**再拆流程**（梳理 as-is 现状流 → 找瓶颈和异常分支 → 设计 to-be 自动化流 → 定人工兜底点），**最后算 ROI**（省的人天 vs 开发维护成本）。「不是所有流程都值得自动化，先用'标准化程度×频次×ROI'筛，这步比急着上手做更重要。」\n\n## 四、软性与转型题（HR/总监面）\n\n- **为什么从 C 端转 B 端 / 为什么实在智能**：标准答案见 [候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md) 第五节，背熟。\n- **讲一个你推动跨部门/多方配合做成一件难事的经历**：用孤独症筛查（医院+政务多方）或杭小育（算法+研发+运营对齐）讲，STAR 结构。\n- **最近关注哪些 AI 前沿**：可聊 Computer Use / Operator（正好接实在 ISSUT）、Agentic 自动化趋势、evals 成为新 PRD——显得你既懂前沿又对口。\n- **你觉得 to B Agent 落地最大的障碍是什么**：答「不是模型能力，是交付——遗留系统无 API、数据安全要私有化、客户 IT 部门的阻力，以及对'零差错'的要求。模型解决不了组织问题」（来自 [行业速通](01-实在智能/02-RPA与Agent行业速通.md)，这种回答会让面试官眼前一亮）。\n\n## 五、针对性追问预案\n\n主站基础文档的追问预案偏 RAG/C 端，这里补 RPA/Agent/to B 方向的连环追问：\n\n| 追问 | 别答错 | 该怎么接 |\n|------|--------|----------|\n| 「你没做过 RPA，凭什么觉得能做好这个岗位？」 | 别硬犟「RPA 不难」 | 「RPA 产品我没做过，但 Agent 的内核——规划、工具调用、评估、兜底——我做过且做得深，RPA 是我要补的具体形态，不是要补的底层能力。」 |\n| 「你的评估方法论在 C 端用，to B 真能直接搬？」 | 别说「完全一样」 | 「方法论框架能搬，指标要换——to B 更看任务成功率、passᵏ、接管率、ROI，容错更低。我清楚要调什么。」 |\n| 「to B 客户很难搞，你一个做 C 端的扛得住吗？」 | 别回避 | 用孤独症筛查的多方协同经历证明你啃过硬场景，再讲「我知道 to B 的难在交付和客户关系，这正是我想来练的」。 |\n| 「Computer Use 这种通用 Agent 出来，你们这种公司会不会被替代？」 | 别盲目吹 AI 也别否定 | 「短期不会——通用 Agent 还撑不起企业要的 99.9% 稳定，而 RPA 厂商的护城河是集成经验、交付能力、客户信任。但 3–5 年压力会变大，所以把'眼睛+大脑'做得更稳、把行业 know-how 沉下来很关键。」 |\n\n> 追问的应对原则就一条：**不懂的诚实说不懂、但立刻给出可迁移的能力和学习路径；懂的往深讲、把战火引回主场。**\n\n## 下一步\n\n题练完了，最后准备好你要问的和要谈的：[反问环节与谈薪](01-实在智能/07-反问环节与谈薪.md)。\n", "/01-实在智能/README.md": "# 实在智能 · 速览作战地图\n\n> 时间紧只看这一篇。一页纸说清：这家公司是谁、这个岗位要什么、你站在哪、上桌前必须背下的几句话。详细展开见本专题其余各篇。\n\n## 一、30 秒看懂这家公司和这个岗位\n\n**公司**：浙江实在智能科技有限公司（实在智能），2018 年成立，总部杭州余杭未来科技城。国内**企业级 AI Agent + RPA（机器人流程自动化）**赛道头部，国家级专精特新「小巨人」，2023 年 12 月完成近 2 亿元 C 轮。核心产品**「实在 Agent」**——号称全球首发的企业级通用智能体，对外讲「数字员工」，给企业干活，不做 C 端个人用户。\n\n**岗位**：AI 产品经理，18–35K·15 薪，余杭，要求 3–5 年经验，本科。三个标签把方向说死了：**Agent、B 端产品、RPA**。职责是做 AI Agent + RPA 产品平台的需求分析、版本规划、功能设计，和售前/市场一起对接客户、推研发落地，对核心指标和项目交付负责。\n\n> [!IMPORTANT]\n> 这是一个典型的 **to B / 项目交付型** 岗位，和你主场的 C 端（杭小育 460 万用户）是两个世界。这个专题大半的功夫，就花在帮你把 C 端的底牌「翻译」成这家公司听得懂、信得过的语言。详见 [候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md)。\n\n## 二、你的牌面：强弱速判\n\n```mermaid\ngraph TB\n    classDef strong fill:#276749,stroke:#1E5038,stroke-width:2px,color:#fff\n    classDef mid fill:#2B6CB0,stroke:#1E5090,stroke-width:2px,color:#fff\n    classDef weak fill:#C05621,stroke:#9C4221,stroke-width:2px,color:#fff\n\n    subgraph Match[\"对照实在智能 AI PM 岗的匹配度\"]\n        S1[\"Agent 与工具调用理解<br/>SAGE Text2SQL Agent 亲手做过\"]:::strong\n        S2[\"评估闭环方法论<br/>正好接 to B Agent 的成功率/ROI\"]:::strong\n        S3[\"ROI/降本意识<br/>CAG 降本 80%，懂客户买单逻辑\"]:::strong\n        S4[\"产品设计/体验<br/>设计背景，低代码平台体验是切口\"]:::mid\n        W1[\"to B 产品经验<br/>主场是 C 端，需主动补叙事\"]:::weak\n        W2[\"RPA 完全陌生<br/>赛道知识必须临考补\"]:::weak\n        W3[\"资历 1 年 vs JD 3-5 年<br/>用经历密度对冲\"]:::weak\n    end\n```\n\n绿色是直接能打的牌，主动输出；蓝色稍加打磨即稳；橙色是命门，靠这个专题硬补。**核心打法：不装懂 RPA，而是用「我做过的 Agent / 评估 / 降本，恰好是你们 to B Agent 最需要的能力」把战火引到自己主场。**\n\n## 三、必背谈资：让面试官觉得你做过功课\n\n下面 6 条任选 2–3 条揉进对话，立刻和「海投选手」拉开差距。出处与展开见 [公司与产品全景](01-实在智能/01-公司与产品全景.md)。\n\n1. **三位一体架构**：实在 Agent = TARS 大模型（大脑，负责思考规划）+ ISSUT 智能屏幕语义理解（眼睛，看懂界面）+ RPA 引擎（手脚，操作软件）。一句话——「能思考、会行动、可闭环、全自主」的数字员工。\n2. **ISSUT 是最硬的技术壁垒**：它让机器像人眼一样「看懂」屏幕，**不依赖软件开放 API 就能操作任意系统**，连 30 年前的老 ERP 都能接——这正是传统 RPA 最大的痛点（必须有 API、界面一变就崩）。对标海外就是 Anthropic 的 Computer Use、OpenAI 的 Operator。\n3. **创始人孙林君**：阿里 P9 算法专家出身，在阿里主导过支撑花呗、借呗的「诚信模型体系」——从金融风控算法到企业智能体，这条线很顺。\n4. **政治势能**：2025 年 3 月浙江省长刘捷专程调研实在智能，称其技术「填补了国内流程自动化领域空白」。\n5. **商业化巧劲**：2025 年产品升级后兼容 DeepSeek 等开源大模型，企业可以「用 DeepSeek 的脑 + 实在的眼睛手脚」，大幅降低切换成本和模型授权费。\n6. **标杆案例张口就来**：河北电信用实在 Agent 做采购取数，每年省 745 人天；吉利汽车财务场景效率提升 300%；周黑鸭近 200 个自动化场景年省 300 万+。（均为公司披露口径，引用时心里有数。）\n\n## 四、面试前的最短路径\n\n| 还剩多久 | 至少做这些 |\n|----------|-----------|\n| 只剩 1 小时 | 读完本篇 + [候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md)；背熟第三节 3 条谈资 + 「为什么从 C 端转 B 端」的答案 |\n| 剩半天 | 加读 [公司与产品全景](01-实在智能/01-公司与产品全景.md) + [RPA 与 Agent 行业速通](01-实在智能/02-RPA与Agent行业速通.md)，把 RPA 是什么、传统 RPA 的痛点讲顺 |\n| 剩 1–2 天 | 全篇过一遍，重点练 [针对性面试题与答法](01-实在智能/06-针对性面试题与答法.md) 的设计题和追问，准备好 [反问](01-实在智能/07-反问环节与谈薪.md) |\n\n## 五、一句话定调\n\n你不是去「冒充」一个 RPA 老兵——3–5 年经验、to B 老手那套你装不出来，也没必要。你要做的是：**用一个 460 万用户 C 端 Agent 的真实操盘手身份，证明你对「Agent 怎么落地、怎么评估、怎么算账」的理解是通用且稀缺的，而 RPA 行业知识你已经补到能对话、且学得飞快。** 把这条主线焊死，每一篇都在为它供弹药。\n", "/01-实在智能/03-竞品格局.md": "# 竞品格局\n\n> 「你怎么看我们和竞品的差异化」几乎一定会被问到。这一篇把中国和海外的格局摆清楚，重点讲实在智能的差异化定位，最后给你一套竞品题的答法骨架。不用全背，记住三强对比 + 实在的差异化 + 一两个海外对标即可。\n\n## 一、中国格局速览\n\n| 厂商 | 总部 | 一句话定位 | 差异化 | 体量（公开口径） |\n|------|------|-----------|--------|------------------|\n| **实在智能** | 杭州 | 大脑+眼睛+手脚的企业级 Agent | 全栈自研（TARS 大模型+ISSUT 视觉），主打无 API 屏幕语义理解 | C 轮近 2 亿、5000+ 客户、CMMI-5 |\n| **影刀 RPA** | 杭州 | 最好用的 RPA 工具，电商场景王者 | 极致易用「搭积木」，电商市占率高 | 累计融资超 1.5 亿美元（高盛领投），3 万+ 客户，独角兽 |\n| **来也科技** | 北京 | RPA+AI 双轮，国际认可 | 中国唯一连续多年入选 Gartner RPA + IDP 双魔力象限，政务深 | C++ 轮累计超 1.6 亿美元 |\n| **弘玑 Cyclone** | 上海 | 国际化超自动化平台 | 金融大客户、海外布局，Gartner/Forrester 认可 | 累计融资约 2.3 亿美元 |\n| **艺赛旗** | 上海 | 超自动化三件套 | RPA + 桌面行为分析 + 流程挖掘全链，财务垂直 | 数亿元战略融资 |\n| **金智维** | 深圳 | 金融国央企深水区 | 银行/证券/保险，国有大行覆盖广 | 政企客户千家级 |\n| **云扩科技** | 上海 | 企业级低代码 RPA | 红杉早期布局，低代码、多系统集成 | B 轮 3000 万美元 |\n| 阿里云 / 腾讯云智 RPA | 杭州/深圳 | 云生态内 RPA | 绑定钉钉/企微生态 | 云业务一部分 |\n\n> 数据为不同来源整合，融资/市占率口径不一，**记量级和定位即可，别背精确数字**。字节目前无对外售卖的 RPA 产品。\n\n## 二、三强深度对比：实在 vs 影刀 vs 来也\n\n这三家最值得搞清楚——影刀同城、来也是老牌龙头、实在是你要面的。\n\n| 维度 | 实在智能 | 影刀 RPA | 来也科技 |\n|------|---------|---------|---------|\n| 核心路线 | AI Native：自研大模型 + 屏幕视觉，强调 Agent 自主执行 | 产品型：极致易用、低门槛，主攻中小企业 | RPA+AI 双轮：UiBot 传统生态 + AI 平台 |\n| 技术壁垒 | 全栈自研 TARS + ISSUT 视觉，唯一主打「屏幕语义理解」 | 易用性工程 + 移动端自动化强 | UiBot Mage 平台 + IDP，多模态 NLP 积累，国际认可 |\n| 目标客户 | 央企/国企/500 强（金融、运营商、制造、能源），大客户为主 | 中小企业、电商卖家为主，客单价偏低 | 政府/大型企业，政务最强 |\n| 商业模式 | 方案型：实施交付主导，项目制 | 产品型：自助购买、标准化、走量 | 产品+服务混合 |\n| 大模型策略 | 最激进，自研 TARS 融进产品核心 | 接主流大模型 API 辅助生成流程 | UiBot Mage 集成多种 AI |\n| 弱点 | 自研大模型成本高、能否持续投入存疑 | 大型复杂场景能力弱、AI 原生弱 | 融资节奏偏慢、商业化节奏弱于影刀 |\n\n**一句话路线差异**：\n- **影刀** = 做「最好用的 RPA 工具」，产品驱动，下沉电商。\n- **来也** = 做「国际认可的 RPA+AI 平台」，政务护城河。\n- **实在** = 做「企业级通用 AI Agent」，全栈自研、技术叙事最激进，押注 Agent 时代弯道超车。\n\n## 三、海外标杆与「AI 操作电脑」新范式\n\n**传统三巨头**：UiPath（全球 RPA 第一，FY2026 营收约 15 亿美元，正转型 Agentic Automation）、Automation Anywhere（云原生，大型企业）、Microsoft Power Automate（绑定 M365 生态，2026 主推自愈自动化）。\n\n**最值得记的新范式——「AI 直接操作电脑」**：\n\n| 产品 | 厂商 | 能力 | 和 RPA 的关系 |\n|------|------|------|---------------|\n| Computer Use | Anthropic（Claude） | 截图理解屏幕语义、控制鼠标键盘，企业可自部署 | 实在 ISSUT 的海外对标，验证了「屏幕语义理解替代脆弱元素定位」可行 |\n| Operator / CUA | OpenAI | 云端驱动浏览器执行操作 | 偏 C 端和网页自动化，企业自主性弱 |\n| Copilot Studio Computer Use | Microsoft | 让 Agent 操控企业 GUI 系统 | 最危险的潜在竞争者，大客户本就有 M365 |\n\n> **关键判断（面试金句）**：Computer Use 这类产品 2025–2026 还在「能用但不稳定」阶段（各基准成功率波动很大），**还撑不起企业生产环境要的 99.9% 稳定性**。RPA 老厂商真正的护城河不是模型本身，而是**系统集成经验、客户信任、交付团队、异常处理能力**——这些模型替代不了。但 3–5 年内压力会越来越大。这段话能体现你既懂前沿、又有商业判断，不盲目吹 AI。\n\n## 四、实在智能的差异化，怎么答\n\n被问「你怎么看我们和竞品的差异化」，按这个结构答（先承认格局、再点差异、最后给判断）：\n\n1. **承认赛道拥挤**：「RPA+Agent 这条赛道国内挺卷，影刀、来也、弘玑各有山头。」——显得你了解全局，不是只看过实在官网。\n2. **点出实在的真差异**：「实在最不一样的是**全栈自研 + ISSUT 屏幕语义理解**这条路——别家多是接大模型 API 做辅助，实在是自己做了 TARS 大脑和视觉的眼睛，主打无 API 也能操作任意系统。在大量老旧系统没有 API 的大客户场景里，这是实打实的壁垒。」\n3. **给个有保留的判断**：「这条路投入重、自研大模型成本高，是把宝押在 Agent 时代的能力深度上。短期看交付和大客户服务是胜负手，长期看谁的'眼睛+大脑'更稳谁赢。」\n\n这样回答，既懂行业、又懂这家公司、还有自己的判断，远胜过「你们技术很领先」这种话。\n\n## 五、竞品题的万能骨架\n\n任何「你怎么看 X 竞品 / 这个赛道」的题，套这四步：\n\n```mermaid\ngraph LR\n    classDef s fill:#2B6CB0,stroke:#1E5090,stroke-width:2px,color:#fff\n    A[\"格局<br/>赛道有哪几派玩家\"]:::s --> B[\"差异<br/>各自的路线和壁垒\"]:::s\n    B --> C[\"定位<br/>这家公司站在哪、强在哪\"]:::s\n    C --> D[\"判断<br/>胜负手是什么·有保留的观点\"]:::s\n```\n\n> 这套骨架和主站基础文档里「拆任何 AI 产品的万能模板」是一脉相承的——先全局后个体、先事实后判断。差别只是这里换成了 to B 自动化赛道的料。\n\n## 下一步\n\n格局清楚了，回到岗位本身——把这份 JD 逐条翻译成「他想听什么、你怎么接」：[岗位 JD 逐条拆解](01-实在智能/04-岗位JD逐条拆解.md)。\n", "/01-实在智能/04-岗位JD逐条拆解.md": "# 岗位 JD 逐条拆解\n\n> JD 不是招聘话术，是面试官的出题大纲。这一篇把每条职责、每条要求翻译成「他在考你什么 + 你拿什么接」。读完你会清楚：哪几条是你的主场要主动亮，哪几条是软肋要提前备好话术。\n\n## 原始 JD（先看清楚再拆）\n\n**岗位职责**\n1. 参与核心前沿 AI Agent + RPA 产品相关平台的用户调研、需求分析、版本规划及功能设计；\n2. 与售前及市场等业务部门紧密合作，深入理解客户需求，推动研发设计团队完成高质量产品方案落地，持续优化用户体验；\n3. 对产品的核心指标、使用体验及项目交付负责，通过优秀的设计与高质量文档为项目提供支持。\n\n**任职要求**\n1. 有一定 to B 产品工作经验，AI、自动化、低代码相关经历优先；\n2. 全日制本科及以上，计算机、软件工程、人工智能、信息管理、交互设计等相关专业优先；\n3. 沟通协作与学习能力强，对 AI 前沿技术敏感，能快速掌握新技术；\n4. 逻辑思维清晰，能将复杂问题结构化处理并提出可执行方案；\n5. 具备良好的产品设计能力。\n\n## 一、职责逐条拆\n\n### 职责 1 · 产品全流程（调研→需求→规划→设计）\n\n**考的是**：你是不是一个能独立走完产品全流程的 PM，而不是只会画原型的执行。\n\n**你怎么接**：这是你的主场。杭小育从需求到功能设计、SAGE 取数从 0 搭 Text2SQL Agent，你都走过完整链路。讲的时候按「调研怎么做的 → 需求怎么筛的 → 版本怎么排的 → 功能怎么设计的」结构化复述，别流水账。\n\n**唯一要补的**：to B 的「用户调研」和 C 端不一样——to B 出钱的（老板）和用的（一线员工）常常不是一个人，要分开访谈。这点话术见 [候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md)，面试若问「to B 调研你会怎么做」，先承认差异、再讲方法。\n\n### 职责 2 · 跨部门协同（售前/市场/研发，推方案落地）\n\n**考的是**：to B 岗位的核心——你能不能把售前带回的客户需求、市场的声音、研发的实现，拧成一个能落地的方案。**售前协同是 to B PM 区别于 C 端的最大不同点，面试官大概率深挖。**\n\n**你怎么接**：你没有「售前」这个角色的协作经验，但你有**跨职能、跨端推动**的经验——杭小育要和算法、研发、运营对齐，孤独症筛查涉及医院/政务多方。把这些讲成「我习惯在多方诉求里找最大公约数、推动落地」的能力证明。\n\n**软肋预警**：被追问「销售为了签单答应了客户一个我们没有的功能，你怎么办」这类题，别硬装经验，用结构化判断答（话术和题目见 [针对性面试题与答法](01-实在智能/06-针对性面试题与答法.md)）。\n\n### 职责 3 · 对指标/体验/交付负责 + 高质量文档\n\n**考的是**：三件事——（1）你有没有用指标驱动产品的意识；（2）体验设计能力；（3）项目交付的责任心和文档能力。\n\n**你怎么接**，这条几乎每个点都打在你强项上：\n\n- **核心指标**：你做过 Badcase 评估闭环、准确率 97.5%、CAG 降本 80%——「我习惯先定义清楚成功指标，再用数据驱动迭代」，这正是 to B Agent 最看重的（成功率/接管率/ROI，见 [行业速通](01-实在智能/02-RPA与Agent行业速通.md)）。\n- **使用体验**：你是设计科班，体验/信息架构敏感——「概率性产品的体验难做，怎么让用户感知和信任不确定的结果，是我一直在想的事」。\n- **项目交付 + 高质量文档**：你的设计背景天然擅长把方案讲清楚、文档做漂亮，这条直接亮出来。\n\n> [!IMPORTANT]\n> 职责 3 是你和这个岗位**贴合度最高**的一条。面试里要主动把话题往「指标/评估/体验/文档」上引，把战场设在这里。\n\n## 二、任职要求逐条拆（含匹配度自评）\n\n```mermaid\ngraph TB\n    classDef hit fill:#276749,stroke:#1E5038,stroke-width:2px,color:#fff\n    classDef part fill:#2B6CB0,stroke:#1E5090,stroke-width:2px,color:#fff\n    classDef gap fill:#C05621,stroke:#9C4221,stroke-width:2px,color:#fff\n\n    R1[\"要求1 · to B 经验+AI/自动化/低代码<br/>AI 强·to B 偏弱·低代码沾边\"]:::part\n    R2[\"要求2 · 本科·交互设计等专业优先<br/>环境设计=交互沾边·全日制本科\"]:::hit\n    R3[\"要求3 · 学习力+对 AI 敏感<br/>设计转 AI 一年做到全链路\"]:::hit\n    R4[\"要求4 · 逻辑清晰·结构化拆解<br/>设计训练+项目复盘\"]:::hit\n    R5[\"要求5 · 产品设计能力<br/>设计科班，硬主场\"]:::hit\n```\n\n| 要求 | 匹配度 | 怎么说 |\n|------|--------|--------|\n| 1 · to B + AI/自动化/低代码 | 部分命中 | **AI 经历是强项**（杭小育全链路、Text2SQL Agent）；to B 有孤独症筛查、SAGE 内部工具的影子但非主场，诚实定位；低代码没直接做过，但可类比「我设计过让非技术用户也能用的产品流程」 |\n| 2 · 本科 + 交互设计等专业优先 | 命中 | JD 白纸黑字写「交互设计等相关专业优先」——你环境设计本科正好沾边，**这条要主动说，把转型劣势翻成专业优势** |\n| 3 · 学习力 + 对 AI 敏感 | 命中 | 设计转 AI 产品一年就做到 RAG/Agent/评估全链路，本身就是「学习力 + 对前沿敏感」最硬的证据 |\n| 4 · 逻辑清晰 + 结构化 | 命中 | 设计训练的信息架构能力 + 项目里把复杂链路拆清楚的经验 |\n| 5 · 产品设计能力 | 命中 | 设计科班，硬主场，结合体验设计讲 |\n\n**注意一个硬 gap**：JD 写「3–5 年经验」，你约 1 年。这条藏不住，但常常可以突破（尤其 AI 岗、对口候选人稀缺时）。打法是**用经历密度对冲年限**，话术见 [候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md) 第四节。简历能投进来、HR 约了你，说明这条不是一票否决，别自己先怂。\n\n## 三、岗位画像总结：这是个什么样的 PM 岗\n\n把 JD 拼起来看，这个岗位要的人是：\n\n> **一个懂 AI/Agent、能独立走完产品全流程、扛得住 to B 项目交付、还能和售前客户打交道的产品经理；专业上偏爱有设计/结构化能力的人。**\n\n它不是纯画原型的执行岗，也不是纯研究的策略岗，而是**「方案型 + 交付型」**——既要想清楚产品怎么设计，又要推得动落地、对得起客户。这决定了面试会同时考：AI/Agent 理解、产品设计、to B 协同与交付、抗压与沟通。\n\n## 四、考点权重预测（精力往哪压）\n\n| 考点 | 出现概率 | 你的状态 | 策略 |\n|------|----------|----------|------|\n| AI/Agent 理解与设计 | 高 | 强 | 主动亮，把 SAGE Agent、评估闭环当主菜 |\n| 评估指标/数据驱动 | 高 | 强 | 主场，往这引 |\n| 产品设计/体验 | 中高 | 强 | 设计背景，亮专业 |\n| to B 需求调研与售前协同 | 高 | 弱 | 提前备话术，承认差异+讲方法 |\n| RPA/行业认知 | 中 | 临考补 | 补到能对话即可，见 [行业速通](01-实在智能/02-RPA与Agent行业速通.md) |\n| 项目交付/抗压软性题 | 中 | 中 | 用真实项目讲责任心 |\n| 为什么转 B 端/为什么实在 | 高 | 备好答案 | 见匹配度篇标准答案 |\n\n> 一句话策略：**把战火引到 AI/评估/设计的主场，把 to B/RPA 的弱项用「方法 + 学习力 + 诚实」稳住，别在弱项上硬撑装老兵。**\n\n## 下一步\n\nJD 拆完，进入最关键的一篇——你的经历到底怎么对接、缺口怎么正面回应：[候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md)。\n", "/01-实在智能/02-RPA与Agent行业速通.md": "# RPA 与 Agent 行业速通\n\n> 你的主场是 C 端 AI 应用，RPA 这个词可能都没怎么用过。这一篇用 PM 视角把 RPA 讲成人话，再把它和你熟悉的 Agent 接起来。读完的目标：面试聊到 RPA、自动化、超自动化时，你不仅能接住，还能讲出门道。\n\n## 一、RPA 到底是什么\n\n**一句话**：RPA（Robotic Process Automation，机器人流程自动化）就是让软件机器人**模拟人在电脑上的操作**——点鼠标、敲键盘、复制粘贴、跨系统搬数据——把重复的、规则清晰的活自动干完。\n\n它最大的特点是**在「表现层」（UI 界面）干活，不改底层系统**。企业里有大量「人盯着屏幕重复操作」的工作：从 A 系统导出数据、粘到 B 系统、生成报表、发邮件、对账开票——这些规则明确、量大、耗人。RPA 就是替这些操作。\n\n典型场景：金融对账/报表/反洗钱、政务税务申报/证件审核、制造 ERP 录入/单据处理、电商订单处理/比价/上架、医疗病历录入/理赔。\n\n### 传统 RPA 的四大局限（理解 AI 赋能的起点，必记）\n\n1. **脆弱怕变**：靠坐标/元素 ID 定位界面，系统升级、分辨率变化、弹个窗就崩。行业里「维护成本高过开发成本」是常态。\n2. **只会按规则走**：遇到规则外的例外就停，需要人工介入或穷举规则（不现实）。\n3. **看不懂非结构化数据**：发票、合同、扫描件、图片它读不了，得先人工转成结构化数据。\n4. **门槛高、周期长**：复杂流程要专职 RPA 工程师录制调试，中小企业吃不消。\n\n> 把这四条记牢——实在智能的 ISSUT（看懂屏幕，破第 1 条）、TARS（自主决策，破第 2 条）、视觉+OCR（读文档，破第 3 条）、文生流程（破第 4 条），本质上就是逐条解决传统 RPA 的痛点。你能把「公司技术」对位到「行业痛点」，理解深度立刻就出来了。\n\n## 二、几个绕不开的概念（速查）\n\n| 概念 | 一句话 | 和 RPA 的关系 |\n|------|--------|---------------|\n| IDP（智能文档处理） | 用 OCR+NLP+CV 从 PDF/图片/扫描件里自动抽结构化信息 | RPA 的「眼睛升级版」，补它读不懂文档的短板 |\n| 流程挖掘（Process Mining） | 分析系统日志，自动发现真实流程路径、找瓶颈和自动化机会 | RPA 的「前置探矿」，告诉你哪些流程值得自动化、ROI 最高 |\n| 超自动化（Hyperautomation） | Gartner 提出，把 RPA+AI+流程挖掘+低代码+BPM 组合起来覆盖端到端 | RPA 是其中的「执行内核」 |\n| 数字员工 | 能干一整类岗位活的自动化系统，通常 = RPA + AI | 实在智能、金智维的主力商业叙事 |\n| APA（Agentic Process Automation） | 2025–2026 的新词，强调 Agent 自主规划、自主纠错，不再是预设规则 | RPA 的下一代形态 |\n\n## 三、演进主线：传统 RPA → AI 赋能 → Agentic 自动化\n\n这是当下行业最热的叙事，**面试必会**。\n\n```mermaid\ngraph LR\n    classDef l1 fill:#90CDF4,stroke:#63B3ED,stroke-width:1px,color:#1A365D\n    classDef l2 fill:#4A90D9,stroke:#3474B8,stroke-width:2px,color:#fff\n    classDef l3 fill:#2B6CB0,stroke:#1E5090,stroke-width:2px,color:#fff\n\n    A[\"RPA 1.0<br/>录制回放·规则固化<br/>2015-2020\"]:::l1\n    B[\"AI 赋能 RPA 2.0<br/>加 OCR/NLP 读文档<br/>2020-2023\"]:::l2\n    C[\"Agentic 自动化 3.0<br/>大模型自主规划执行<br/>2024 至今\"]:::l3\n\n    A -->|\"加一双能读文件的眼睛\"| B\n    B -->|\"配一个能思考决策的大脑\"| C\n```\n\n一句话串起来：**传统 RPA 是「把人的鼠标操作录下来自动播放」；AI 赋能是「加一双能读文档的眼睛」；Agentic 自动化是「给它配一个能思考、能决策、能自主完成一类工作的大脑」。**\n\n### 大模型给 RPA 带来的四个质变\n\n1. **屏幕语义理解（Computer Use）**：不再靠坐标/ID，而是像人一样「看懂」屏幕——知道这是提交按钮、那是金额输入框。界面改版不再崩。这就是实在 ISSUT 的核心，也是 Anthropic Computer Use、OpenAI Operator 的底层能力。\n2. **自然语言指令**：不用写代码或录流程，直接说「把今天销售数据汇总成 Excel 发给销售总监」，Agent 自己拆解执行。\n3. **自主规划（Planning）**：复杂多步任务，Agent 自己拆步骤、调工具、定顺序，不靠人预设所有分支。\n4. **自愈（Self-healing）**：执行失败时识别原因、尝试替代路径，而不是直接报错停机。微软 Power Automate 2026 把这个当核心卖点。\n\n> **接你的经历**：你做 SAGE-AI 取数的 Text2SQL Agent，本质就是「自然语言指令 + 自主规划 + 工具调用」——只不过你的工具是数据库查询，它的工具是键鼠操作。这个类比要敢讲，证明你对 Agent 的理解是迁移得过来的（详见 [候选人匹配度与 gap 改造](01-实在智能/05-候选人匹配度与gap改造.md)）。\n\n## 四、to B Agent 的评估指标（你的强项主场）\n\nto B Agent 和 C 端产品最不一样的地方：**企业生产环境对「对不对」零容忍**，所以评估指标极其重要。这恰恰是你做过 Badcase 评估闭环、最该发力的地方。\n\n| 指标 | 含义 | 为什么重要 |\n|------|------|-----------|\n| 任务成功率（pass¹） | 单次任务完成率 | 最核心，但单次高不代表稳 |\n| passᵏ | 连续 k 次都成功的概率 | 测稳定性。比如 pass³=22% 说明连成 3 次只有两成概率，根本不能用 |\n| 人工接管率 | Agent 干不了、转人工的比例 | 越低越好，但不能为压低它牺牲质量 |\n| ROI | 省的人力成本 ÷（部署+维护成本） | to B 买单的根本依据 |\n| 端到端延迟 | 流程平均耗时 | 实时业务场景敏感 |\n| 错误操作率/幻觉率 | 输出错误或执行了错误操作 | 企业最怕「自信地做错事」 |\n\n> **接你的经历**：你在杭小育做的「离线评估集 + 线上抽检 + Badcase 归因迭代」是一套可迁移的评估方法论，搬到 to B Agent 上几乎直接能用——只是把「回答准确率」换成「任务成功率/接管率」。面试被问「你怎么衡量一个 Agent 好不好」，这是你的高光时刻，别只说指标，要说你**搭过闭环**。\n\n## 五、to B Agent 的商业化逻辑（最实用的面试素材）\n\n### 客户为什么买单\n\n- 传统软件 ROI 模糊（「流程快了 10%」说服力弱）；AI Agent 的突破是**劳动力替代而非辅助**——能算清「原来 5 个人 3 天的活，现在 2 小时」，ROI 直接可算。\n- 优先落地的都是有清晰人工成本对照的场景：财务对账、票据处理、客服工单。\n- 中国国情拐点：过去「人便宜不如多招人」，但随着人力成本上升 + 大模型能力提升，ROI 拐点正在出现。\n\n### 客户为什么难买单（交付难点，比卖点更值得懂）\n\n1. **幻觉**：大模型偶尔「一本正经地做错」，企业零容忍，必须有人工审核兜底，抬高实施成本。\n2. **数据安全/合规**：金融、政务、医疗要私有化部署、数据不出域，交付成本高。\n3. **系统集成复杂**：遗留系统无 API、数据孤岛、IT 部门阻力——这才是落地最真实的障碍，大模型解决不了「组织politics」。\n4. **交付是关键一环**：Agent 的价值里，咨询/实施服务往往比卖 license 更重——这就是为什么实在智能走大客户方案型，而不是纯产品型。\n\n### 收费模式\n\nLicense/订阅（按机器人数/用户数）、RaaS（按处理量/省的人工时收费，更贴 Agent 价值）、大客户项目制（含实施+年维护）、SMB 标准化产品（低价走量）。\n\n> [!IMPORTANT]\n> 「交付难、ROI 要算清、要兜底」这三件事，是这个产品经理岗位的日常。你越能在面试里展现对它们的理解，越能对冲「没做过 to B」的疑虑。把第五节当成你和面试官「聊行业」的弹药库。\n\n## 六、和你的 C 端经验，到底差在哪\n\n| 维度 | 你的 C 端（杭小育） | to B Agent（实在智能） |\n|------|---------------------|------------------------|\n| 用户 | 海量个人，决策=使用 | 企业，出钱的（老板）≠ 用的（一线员工） |\n| 价值 | 体验、留存、增长 | 省人省钱，ROI 可量化 |\n| 容错 | 答得不完美可接受 | 执行错一次可能是事故 |\n| 交付 | 一套产品服务所有人 | 一个客户一个项目，要实施、要定制 |\n| 协作 | 设计/研发/运营 | 多了售前、销售、交付、客户 IT |\n\n看懂这张表，你就知道转场要补什么、又有哪些是相通的（评估、Agent 原理、ROI 意识都相通）。下一篇看这个赛道里实在智能和对手怎么排位：[竞品格局](01-实在智能/03-竞品格局.md)。\n", "/01-实在智能/05-候选人匹配度与gap改造.md": "# 候选人匹配度与 gap 改造\n\n> 全专题最重要的一篇。前面把公司、行业、岗位都摸透了，这一篇只回答一个问题：**面这家公司，你哪些牌要主动打、哪些缺口要怎么补，才能让面试官信你能干这个活。** 话术可以直接背。\n\n## 一、先把诊断说在前面\n\n你的底牌很硬：一个 460 万用户、日活 21.5 万的 C 端 RAG 项目，全链路（多路召回、粗排精排、Rerank、CAG 降本 80%、Text2SQL Agent、推理链路可视化、Badcase 评估闭环、准确率 97.5%）亲手做过——这种密度，工作一年的候选人里少见。\n\n但这家是 to B / Agent + RPA / 项目交付型公司，和你的 C 端主场是两个世界。所以这一关的胜负不在「你会不会 AI」，而在**你能不能让面试官相信：你做过的 Agent、评估、降本，是通用且稀缺的能力，搬到他们的 to B 场景一样打得动；而 RPA / to B 这块你没有的，你补得飞快、也诚实。**\n\n一句话定调：**不装 RPA 老兵，用「Agent 操盘手」的真身把战火引回主场。**\n\n## 二、强项映射：你的经历正好打中这个岗位的哪里\n\n```mermaid\ngraph LR\n    classDef me fill:#2B6CB0,stroke:#1E5090,stroke-width:2px,color:#fff\n    classDef job fill:#276749,stroke:#1E5038,stroke-width:2px,color:#fff\n\n    M1[\"Text2SQL Agent（SAGE）\"]:::me --> J1[\"Agent 理解+工具调用<br/>岗位核心\"]:::job\n    M2[\"Badcase 评估闭环\"]:::me --> J2[\"to B Agent 评估指标<br/>成功率/接管率/ROI\"]:::job\n    M3[\"CAG 降本 80%·ROI 意识\"]:::me --> J3[\"客户买单逻辑<br/>算清 ROI\"]:::job\n    M4[\"设计科班·体验/信息架构\"]:::me --> J4[\"产品设计+低代码体验<br/>JD 明确加分\"]:::job\n    M5[\"跨 B/G 端·健康政务\"]:::me --> J5[\"to B 多方协同的影子\"]:::job\n```\n\n逐条讲怎么用：\n\n- **SAGE Text2SQL Agent → Agent 理解**：这是你最该当主菜的料。「我做过一个 Text2SQL Agent，用户自然语言提问，Agent 自主规划、调用数据库工具取数返回——本质上就是'自然语言指令 + 自主规划 + 工具调用'，和实在 Agent 操作软件是同一套范式，只是工具从 SQL 换成了键鼠。」这一句直接证明你对 Agent 的理解迁移得过来。\n- **Badcase 评估闭环 → to B Agent 评估**：「我搭过'离线评估集 + 线上抽检 + Badcase 归因迭代'的闭环。to B Agent 的评估更狠——要看任务成功率、passᵏ 稳定性、人工接管率，但底层方法论是相通的，我这套换个场景照样能用。」\n- **CAG 降本 80% → 客户买单逻辑**：「我对成本特别敏感，做过 CAG 缓存把成本降了 80%。这个意识在 to B 很关键——客户买 Agent 本质是买 ROI，能不能算清'省了多少人、多少钱'决定卖不卖得动。」\n- **设计科班 → 产品设计/体验**：JD 白纸黑字写「交互设计等专业优先」，这是你的专业红利。「我是设计科班出身，对信息架构和体验敏感，这在做低代码/流程编排这种'要让非技术用户也能上手'的 to B 产品上，是直接能用的能力。」\n- **跨 B/G 端 → to B 协同影子**：孤独症筛查涉及医院、政务多方，SAGE 是给内部用的工具——「我不是只在温室 C 端待过，啃过 B/G 端多方对齐的硬场景。」\n\n## 三、gap 正视：四个缺口，别藏，备好怎么说\n\n| 缺口 | 面试官会怎么戳 | 严重度 |\n|------|----------------|--------|\n| to B 产品经验偏弱（主场 C 端） | 「你主要做 C 端，to B 你行吗」 | 高 |\n| RPA 完全没碰过 | 「你了解 RPA 吗 / 用过哪些 RPA 产品」 | 中 |\n| 项目制交付、售前/销售协同经验少 | 「销售答应了客户一个没有的功能你怎么办」 | 中 |\n| 资历约 1 年 vs JD 要 3–5 年 | 「你只做一年，撑得起这个活吗」 | 高 |\n\n**正视它们，不是认怂，是抢在被戳之前把主动权拿回来。** 你越藏，面试官越觉得你心虚；主动承认 + 立刻翻盘，反而显得成熟。\n\n## 四、gap 改造话术：每个缺口怎么正面回应\n\n### ① to B 经验弱 → 用「可迁移能力 + 诚实补课」翻\n\n> 「我主场确实在 C 端，但我想强调两点：第一，做产品最硬的内核——把需求想透、把指标定清、把方案推落地——是 C 端 B 端相通的，我在 460 万用户的项目里这些都扛过。第二，to B 我也不是空白，孤独症筛查和内部取数工具让我接触过多方协同和企业内场景。我清楚 to B 和 C 端的真实差异，比如出钱的和用的不是一个人、容错要求高、要做交付——这些我已经在系统补，也是我特别想来你们这儿练的。」\n\n### ② 不懂 RPA → 用「我懂它要解决的问题 + 学得快」翻\n\n> 「RPA 产品我确实没直接做过，但我把它要解决的问题搞清楚了：传统 RPA 靠规则和坐标，界面一变就崩、没 API 就接不进去。你们用 ISSUT 让机器像人一样看懂屏幕、TARS 做自主决策，本质是用 Agent 能力逐条破传统 RPA 的痛点。我从设计转 AI 一年就做到全链路，学新东西快是我被验证过的能力，RPA 这块我上手不会慢。」\n\n（这段话同时秀了你做过功课——能说出 ISSUT、TARS，杀伤力很大。）\n\n### ③ 售前协同经验少 → 承认 + 给结构化判断\n\n不要装有经验。被问具体情境题（如销售乱承诺），用判断框架答：先评估这个需求是真痛点还是个例、影响多少客户、和产品方向是否一致，再决定纳入版本/单独定制/婉拒，同时和销售对齐边界、给客户一个有诚意的替代方案。（完整答法见 [针对性面试题与答法](01-实在智能/06-针对性面试题与答法.md)。）\n\n### ④ 资历 1 年 → 用「经历密度」对冲「时长」\n\n> 「我工作一年，但这一年密度很高——RAG 全链路、Text2SQL Agent、评估闭环、CAG 降本我都从 0 到 1 亲手做过，不是螺丝钉式参与。我用经历的密度补时长的不足。一个做了三年但一直做边角的人，未必比我这一年走过的链路更完整。」\n\n> [!IMPORTANT]\n> 这四段话术建议**逐字练熟到能脱口而出**，因为它们对应的问题几乎必问。练的时候注意语气：是坦然、是底气，不是辩解、不是心虚。\n\n## 五、两个必答题的标准答案\n\n### 「为什么从 C 端转 B 端 / 转 RPA 这个方向？」\n\n> 「两个原因。一是我越做越觉得 to B 的 AI 更能看到真实价值——C 端讲留存讲体验，to B 是实打实地替企业省人省钱，ROI 能算清楚，做出来的东西'有用'这件事更确定，这对我很有吸引力。二是我做 Text2SQL Agent 时就对'让 Agent 自主干活'这件事着迷，而企业级 Agent 是这个方向最硬核、落地最深的战场。我不是从 C 端逃出来，是奔着 Agent 落地这件事来的。」\n\n### 「为什么是实在智能？」\n\n> 「三点。第一，技术上我认可你们的路线——全栈自研 + ISSUT 屏幕语义理解，走的是'无 API 也能操作任意系统'的硬骨头，不是接个大模型 API 做辅助，这在大量老系统没接口的真实企业里是实打实的壁垒。第二，赛道上你们是企业级通用 Agent 的头部，2025 年省长都来调研，势能在往上走。第三，岗位上它要的'懂 Agent + 能走全流程 + 有设计能力'恰好是我的组合，我能贡献、也能在 to B 和 RPA 上快速补齐自己缺的那块。」\n\n（这两段把前面所有篇章的功课都浓缩了——技术、竞品、公司动态、岗位匹配，一次性证明你真的研究过。）\n\n## 六、自我介绍针对性改造（30–60 秒版）\n\n主站基础文档里有通用自我介绍脚本，这里给一版**专为实在智能调过侧重**的：\n\n> 「我是陈芮颖，设计专业转 AI 产品，做了大概一年。这一年我主导优化了一个 460 万用户、日活 21 万的 C 端智能体，全链路 RAG、Text2SQL Agent、评估闭环、成本优化都亲手做过，把准确率做到 97.5%、用 CAG 把成本降了 80%。\n>\n> 我特别想来实在智能，是因为我做 Agent 的过程中越来越确信：Agent 真正的价值在企业级落地——能替企业省人省钱、ROI 能算清。你们的 ISSUT + 自研大模型这条路我很认可。\n>\n> 我也清楚自己的短板：主场在 C 端，RPA 和 to B 交付是我要补的。但我做产品的内核、对 Agent 和评估的理解是通用的，学新东西也快——设计转 AI 一年做到全链路就是证明。我想把这套能力用到 to B Agent 上。」\n\n> 这版的设计逻辑：**第一段抛量级和全链路锚定主场 → 第二段讲动机+做过功课 → 第三段主动认短板+翻盘**。主动认短板反而显得坦诚和成熟，比藏着掖着等被戳强。\n\n## 下一步\n\n底牌和话术齐了，去练具体的题：[针对性面试题与答法](01-实在智能/06-针对性面试题与答法.md)。\n"};
+
+(function () {
+  var MD = window.__MD__ || {};
+  function keyOf(url) {
+    var p;
+    try { p = new URL(url, document.baseURI).pathname; }
+    catch (e) { p = String(url).split('?')[0].split('#')[0]; if (p[0] !== '/') p = '/' + p; }
+    try { p = decodeURIComponent(p); } catch (e) {}
+    return p;
+  }
+  function lookup(url) {
+    var k = keyOf(url);
+    if (Object.prototype.hasOwnProperty.call(MD, k)) return MD[k];
+    var bestKey = null;
+    for (var key in MD) {
+      if (key.length <= k.length && k.slice(k.length - key.length) === key) {
+        if (bestKey === null || key.length > bestKey.length) bestKey = key;
+      }
+    }
+    return bestKey === null ? undefined : MD[bestKey];
+  }
+  var RealXHR = window.XMLHttpRequest;
+  window.XMLHttpRequest = function () {
+    var xhr = new RealXHR(), _url, _async = true;
+    var _open = xhr.open, _send = xhr.send;
+    xhr.open = function (m, u, a) { _url = u; _async = (a !== false); try { return _open.apply(xhr, arguments); } catch (e) {} };
+    xhr.send = function () {
+      var t = lookup(_url);
+      if (t !== undefined) {
+        try { Object.defineProperty(xhr, 'readyState', { configurable: true, get: function () { return 4; } }); } catch (e) {}
+        try { Object.defineProperty(xhr, 'status', { configurable: true, get: function () { return 200; } }); } catch (e) {}
+        try { Object.defineProperty(xhr, 'responseText', { configurable: true, get: function () { return t; } }); } catch (e) {}
+        try { Object.defineProperty(xhr, 'response', { configurable: true, get: function () { return t; } }); } catch (e) {}
+        setTimeout(function () {
+          if (typeof xhr.onreadystatechange === 'function') xhr.onreadystatechange();
+          if (typeof xhr.onload === 'function') xhr.onload();
+          try { xhr.dispatchEvent(new Event('load')); } catch (e) {}
+        }, 0);
+        return;
+      }
+      return _send.apply(xhr, arguments);
+    };
+    return xhr;
+  };
+  var realFetch = window.fetch ? window.fetch.bind(window) : null;
+  window.fetch = function (input, init) {
+    var u = (typeof input === 'string') ? input : (input && input.url);
+    var t = lookup(u || '');
+    if (t !== undefined) {
+      return Promise.resolve(new Response(t, { status: 200, headers: { 'Content-Type': 'text/markdown; charset=utf-8' } }));
+    }
+    return realFetch ? realFetch(input, init) : Promise.reject(new Error('offline miss'));
+  };
+})();
+
+</script>
+<script src="https://cdn.archeruuu.com/libs/docsify/docsify.min.js"></script>
+
+    <!-- Mermaid -->
+    <script src="https://cdn.archeruuu.com/libs/mermaid/mermaid.min.js"></script>
+    <script>
+      (function () {
+        var dark = document.body.classList.contains("dark");
+        var FONT = 'ui-sans-serif, system-ui, -apple-system, "PingFang SC", sans-serif';
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: dark ? "dark" : "default",
+          securityLevel: "loose",
+          themeVariables: dark
+            ? { fontFamily: FONT, fontSize: "14px", clusterBkg: "#161d2e", clusterBorder: "#2b3650", lineColor: "#8893ad", titleColor: "#aab4d4", noteBkgColor: "#222c44", noteBorderColor: "#3a4a6b", noteTextColor: "#dfe6ff", actorBkg: "#1b2740", actorBorder: "#2b3650", actorTextColor: "#e6ecff", signalColor: "#8893ad", signalTextColor: "#dfe6ff" }
+            : { fontFamily: FONT, fontSize: "14px", clusterBkg: "#f1f5fb", clusterBorder: "#dce4f0", lineColor: "#94a3b8", titleColor: "#64748b", noteBkgColor: "#eef2f9", noteBorderColor: "#cbd5e1", noteTextColor: "#334155", actorBkg: "#eef2fb", actorBorder: "#c7d2e6", actorTextColor: "#1a2236", signalColor: "#94a3b8", signalTextColor: "#475569" },
+        });
+      })();
+    </script>
+
+    <!-- Plugins -->
+    <script src="https://cdn.archeruuu.com/libs/docsify/plugins/search.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/docsify/plugins/docsify-copy-code.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/docsify/plugins/docsify-pagination.min.js"></script>
+
+    <!-- Panzoom -->
+    <script src="https://cdn.archeruuu.com/libs/panzoom/panzoom.min.js"></script>
+    <!-- 数学公式渲染（KaTeX + docsify-katex）：$...$ 行内、$$...$$ 块级 -->
+    <script src="https://cdn.archeruuu.com/libs/katex/katex.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/katex/docsify-katex.js"></script>
+
+    <!-- 代码高亮 -->
+    <!-- 按 Prism 依赖顺序加载（js→ts→jsx→tsx、css→scss、json→json5）；html/markup 已在 Prism 核心内置 -->
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-typescript.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-jsx.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-tsx.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-css.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-scss.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-bash.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-yaml.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-json.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-json5.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-python.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-java.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-kotlin.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-go.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-rust.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-sql.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-docker.min.js"></script>
+    <script src="https://cdn.archeruuu.com/libs/prism/components/prism-markdown.min.js"></script>
+
+    <script>
+      // Mermaid 渲染插件
+      (function () {
+        function renderMermaid() {
+          const mermaidBlocks = document.querySelectorAll(
+            'pre[data-lang="mermaid"] code'
+          );
+          mermaidBlocks.forEach((block, index) => {
+            const pre = block.parentElement;
+            const code = block.textContent;
+            const container = document.createElement("div");
+            container.className = "mermaid";
+            container.setAttribute("data-original-code", code);
+            container.textContent = code;
+            pre.parentNode.replaceChild(container, pre);
+          });
+
+          if (window.mermaid) {
+            mermaid.init(
+              undefined,
+              document.querySelectorAll(".mermaid:not([data-processed])")
+            );
+          }
+        }
+
+        // Mermaid 全屏预览：点击 SVG 打开；打开即居中适配屏幕；缩放围绕中心/光标，不漂移
+        var IV_ICON = {
+          minus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14"/></svg>',
+          plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>',
+          fit: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></svg>',
+          close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>',
+        };
+        function openViewer(svg) {
+          if (!window.Panzoom) return;
+          var vb = svg.viewBox && svg.viewBox.baseVal;
+          var rect = svg.getBoundingClientRect();
+          var natW = (vb && vb.width) || rect.width || 800;
+          var natH = (vb && vb.height) || rect.height || 600;
+          var overlay = document.createElement("div"); overlay.className = "iv-overlay";
+          var stage = document.createElement("div"); stage.className = "iv-stage";
+          // 直接克隆 SVG 节点（矢量），而非转成 <img src=svg-blob> 光栅图——放大时按矢量重渲染，不糊
+          var img = svg.cloneNode(true); img.removeAttribute("class"); img.removeAttribute("style");
+          img.setAttribute("preserveAspectRatio", "xMidYMid meet"); img.style.display = "block";
+          stage.appendChild(img); overlay.appendChild(stage);
+
+          var bar = document.createElement("div"); bar.className = "iv-toolbar";
+          function mkBtn(icon, title) { var b = document.createElement("button"); b.type = "button"; b.title = title; b.setAttribute("aria-label", title); b.innerHTML = icon; bar.appendChild(b); return b; }
+          var bOut = mkBtn(IV_ICON.minus, "缩小 (-)");
+          var bFit = mkBtn(IV_ICON.fit, "适配屏幕 (0 / 双击)");
+          var bIn = mkBtn(IV_ICON.plus, "放大 (+)");
+          var sep = document.createElement("div"); sep.className = "iv-sep"; bar.appendChild(sep);
+          var bClose = mkBtn(IV_ICON.close, "关闭 (Esc)");
+          overlay.appendChild(bar);
+
+          var hint = document.createElement("div"); hint.className = "iv-hint";
+          hint.textContent = matchMedia("(pointer: coarse)").matches ? "双指缩放 · 单指拖动 · 双击适配" : "滚轮缩放 · 拖拽平移 · 双击适配 · Esc 关闭";
+          overlay.appendChild(hint);
+          document.body.appendChild(overlay);
+
+          function fit() {
+            var s = Math.min((window.innerWidth * 0.92) / natW, (window.innerHeight * 0.84) / natH);
+            img.style.width = (natW * s) + "px"; img.style.height = (natH * s) + "px";
+          }
+          fit();
+
+          var pz = Panzoom(stage, { maxScale: 16, minScale: 0.4, step: 0.3, cursor: "grab" });
+          function _clamp(s) { return Math.max(0.4, Math.min(16, s)); }
+          // 滚轮缩放：绑全屏 overlay，任意位置可触发；以光标为锚点（zoomToPoint 围绕光标，不飘左上）
+          overlay.addEventListener("wheel", function (e) {
+            e.preventDefault();
+            pz.zoomToPoint(_clamp(pz.getScale() * (e.deltaY < 0 ? 1.18 : 1 / 1.18)), e);
+          }, { passive: false });
+          // 双指捏合：绑全屏 overlay，任意位置可触发；以双指中心为锚点（panzoom 默认不接管 pinch）
+          var _pd = 0, _ps = 1;
+          overlay.addEventListener("touchstart", function (e) {
+            if (e.touches.length === 2) { var a = e.touches[0], b = e.touches[1]; _pd = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); _ps = pz.getScale(); }
+          }, { passive: false });
+          overlay.addEventListener("touchmove", function (e) {
+            if (e.touches.length === 2 && _pd) { e.preventDefault(); var a = e.touches[0], b = e.touches[1]; var d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); pz.zoomToPoint(_clamp(_ps * d / _pd), { clientX: (a.clientX + b.clientX) / 2, clientY: (a.clientY + b.clientY) / 2 }); }
+          }, { passive: false });
+          overlay.addEventListener("touchend", function (e) { if (e.touches.length < 2) _pd = 0; });
+          requestAnimationFrame(function () { overlay.classList.add("active"); });
+
+          function doFit() { fit(); pz.reset({ animate: true }); }
+          bIn.onclick = function () { pz.zoomIn({ animate: true }); };
+          bOut.onclick = function () { pz.zoomOut({ animate: true }); };
+          bFit.onclick = doFit;
+          stage.addEventListener("dblclick", doFit);
+          // 移动端双击适配（touch 无 dblclick，检测两次快速、相近位置的单指轻点）
+          var _lastTap = 0, _ltX = 0, _ltY = 0;
+          stage.addEventListener("touchend", function (e) {
+            if (e.touches.length !== 0 || e.changedTouches.length !== 1) return;
+            var t = e.changedTouches[0], now = Date.now();
+            if (now - _lastTap < 320 && Math.abs(t.clientX - _ltX) < 30 && Math.abs(t.clientY - _ltY) < 30) { doFit(); _lastTap = 0; }
+            else { _lastTap = now; _ltX = t.clientX; _ltY = t.clientY; }
+          });
+          window.addEventListener("resize", doFit);
+
+          function close() {
+            overlay.classList.remove("active");
+            document.removeEventListener("keydown", onKey);
+            window.removeEventListener("resize", doFit);
+            setTimeout(function () { try { pz.destroy(); } catch (e) {} overlay.remove(); }, 200);
+          }
+          bClose.onclick = close;
+          overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
+          function onKey(e) {
+            if (e.key === "Escape") close();
+            else if (e.key === "+" || e.key === "=") pz.zoomIn({ animate: true });
+            else if (e.key === "-" || e.key === "_") pz.zoomOut({ animate: true });
+            else if (e.key === "0") doFit();
+          }
+          document.addEventListener("keydown", onKey);
+        }
+        function setupPanzoom() {
+          document.querySelectorAll(".mermaid svg").forEach((svg) => {
+            if (svg._panzoomBound) return;
+            svg._panzoomBound = true;
+            svg.style.cursor = "zoom-in";
+            svg.addEventListener("click", function () { openViewer(svg); });
+          });
+        }
+
+        if (window.$docsify) {
+          window.$docsify.plugins = [].concat(
+            window.$docsify.plugins || [],
+            function (hook) {
+              hook.doneEach(function () {
+                setTimeout(function () {
+                  renderMermaid();
+                  // 等 Mermaid 渲染完 SVG 后再绑定 Panzoom
+                  setTimeout(setupPanzoom, 500);
+                }, 50);
+              });
+            }
+          );
+        }
+      })();
+    </script>
+
+    <!-- 封面：盖板按钮兜底跳转 + 粒子网络背景 -->
+    <script>
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest("a.cover-btn");
+        if (!a) return;
+        var href = a.getAttribute("href") || "";
+        if (href.indexOf("#") === 0) { e.preventDefault(); window.location.hash = href; }
+      });
+      (function () {
+        var pts = null, W = 0, H = 0, raf = null;
+        function frame() {
+          raf = null;
+          var c = document.getElementById("cover-canvas");
+          if (!c) { pts = null; return; } // 不在封面：停止循环（省资源、避免与滚动争用）
+          if (document.body.classList.contains("reduce-motion")) { try { var x = c.getContext("2d"); x.clearRect(0, 0, c.width, c.height); } catch (e) {} pts = null; return; }
+          var w = c.clientWidth, h = c.clientHeight;
+          if (w && h) {
+            if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
+            W = w; H = h;
+            if (!pts) { var n = Math.min(70, Math.floor(w * h / 16000)); pts = []; for (var i = 0; i < n; i++) pts.push({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35 }); }
+            var ctx = c.getContext("2d"); ctx.clearRect(0, 0, W, H);
+            var dark = document.body.classList.contains("dark");
+            var lineRGB = dark ? "94,209,255" : "99,102,241";
+            var dotColor = dark ? "rgba(167,139,250,0.7)" : "rgba(124,92,240,0.5)";
+            for (var i = 0; i < pts.length; i++) { var p = pts[i]; p.x += p.vx; p.y += p.vy; if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1; }
+            for (var a = 0; a < pts.length; a++) for (var b = a + 1; b < pts.length; b++) {
+              var dx = pts[a].x - pts[b].x, dy = pts[a].y - pts[b].y, d = Math.sqrt(dx * dx + dy * dy);
+              if (d < 130) { ctx.strokeStyle = "rgba(" + lineRGB + "," + (0.2 * (1 - d / 130)) + ")"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(pts[a].x, pts[a].y); ctx.lineTo(pts[b].x, pts[b].y); ctx.stroke(); }
+            }
+            for (var k = 0; k < pts.length; k++) { ctx.fillStyle = dotColor; ctx.beginPath(); ctx.arc(pts[k].x, pts[k].y, 1.7, 0, 6.283); ctx.fill(); }
+          }
+          raf = requestAnimationFrame(frame); // 仍在封面：继续
+        }
+        function start() { if (!raf) raf = requestAnimationFrame(frame); }
+        start();
+        setTimeout(start, 400); setTimeout(start, 1000); // 初始封面渲染后补启动
+        window.addEventListener("hashchange", function () { setTimeout(start, 150); });
+      })();
+    </script>
+  </body>
+</html>
